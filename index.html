@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/ligaoyan/ligaoyan.github.io.git/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/ligaoyan/ligaoyan.github.io.git/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/ligaoyan/ligaoyan.github.io.git/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ligaoyan/ligaoyan.github.io.git/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/ligaoyan/ligaoyan.github.io.git/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/ligaoyan/ligaoyan.github.io.git/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/ligaoyan/ligaoyan.github.io.git/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="keywords" content="css js DOM">
+<meta property="og:type" content="website">
+<meta property="og:title" content="lgy的博客">
+<meta property="og:url" content="https://github.com/ligaoyan/ligaoyan.github.io.git/index.html">
+<meta property="og:site_name" content="lgy的博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="lgy的博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/ligaoyan/ligaoyan.github.io.git/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/ligaoyan/ligaoyan.github.io.git/"/>
+
+
+
+
+
+  <title>lgy的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/ligaoyan/ligaoyan.github.io.git/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lgy的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/ligaoyan/ligaoyan.github.io.git/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/ligaoyan/ligaoyan.github.io.git/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/ligaoyan/ligaoyan.github.io.git/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/ligaoyan/ligaoyan.github.io.git/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ligaoyan/ligaoyan.github.io.git/ligaoyan/ligaoyan.github.io.git/2018/11/08/JS的引用类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ligaoyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/ligaoyan/ligaoyan.github.io.git/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lgy的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/ligaoyan/ligaoyan.github.io.git/2018/11/08/JS的引用类型/" itemprop="url">JS的引用类型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-08T18:46:52+08:00">
+                2018-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/ligaoyan/ligaoyan.github.io.git/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Object类型"><a href="#Object类型" class="headerlink" title="Object类型"></a>Object类型</h3><p>创建Object实例的方式有两种。第一种是使用new操作符后跟Object构造函数，如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var person = new Object();</span><br><span class="line">person.name = &quot;Nicholas&quot;;</span><br><span class="line">person.age = 29;</span><br></pre></td></tr></table></figure></p>
+<p>另一种是使用对象字面量表示法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    name : &quot;Nicholas&quot;,</span><br><span class="line">    age : 29 </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>对象字面量语法要求的代码量少，而且整体性好，更受开发人员亲睐。</p>
+<h3 id="Array类型"><a href="#Array类型" class="headerlink" title="Array类型"></a>Array类型</h3><p>创建数组的基本方式有两种，第一种是使用Array构造函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var colors1 = new Array();</span><br><span class="line">var colors2 = new Array(20);</span><br><span class="line">var colors3 = new Array(&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>第二种是使用数组字面量表示法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];</span><br><span class="line">alert(colors[0]); // 显示第一项</span><br><span class="line">colors[2] = &quot;black&quot;; // 修改第三项</span><br><span class="line">colors[3] = &quot;brown&quot;; // 新增第四项</span><br></pre></td></tr></table></figure></p>
+<p>数组的项数保存在其length属性中，而且这个属性可用来在数组末尾移除项和添加项。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];</span><br><span class="line">alert(colors.length); // 3</span><br><span class="line">colors.length = 2; // 会移除最后一项</span><br><span class="line">colors[colors.length] = &quot;black&quot;; // 末尾添加一项</span><br></pre></td></tr></table></figure></p>
+<h5 id="数组的一些方法"><a href="#数组的一些方法" class="headerlink" title="数组的一些方法"></a>数组的一些方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];</span><br><span class="line">alert(colors.toString()); // red,blue,green</span><br><span class="line">alert(colors.valueOf()); // red,blue,green</span><br><span class="line">alert(colors.join(&apos;|&apos;)); // red|blue|green</span><br><span class="line">//栈方法</span><br><span class="line">alert(colors.push(&apos;yellow&apos;)); // 4,末端添加一项，返回长度</span><br><span class="line">alert(colors.pop()); // &quot;yellow&quot;，返回末端去掉的一项</span><br><span class="line">alert(colors.length); // 3</span><br><span class="line">//队列方法</span><br><span class="line">alert(colors.unshift(&quot;yellow&quot;)); // 4,首端添加一项，返回长度</span><br><span class="line">alert(colors.pop()); // &quot;green&quot;，返回末端去掉的一项</span><br><span class="line">alert(colors); // yellow,red,blue</span><br></pre></td></tr></table></figure>
+<p>重排序方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var values = [0,1,5,10,15];</span><br><span class="line">values.reverse();</span><br><span class="line">alert(values); // 15,10,5,1,0</span><br><span class="line">values.sort();</span><br><span class="line">alert(values); // 0,1,10,15,5</span><br><span class="line">function compare(value1,value2)&#123;  // 升序比较函数</span><br><span class="line">	if (value1 &lt; value2) &#123;</span><br><span class="line">		return -1;</span><br><span class="line">	&#125;else if (value1 &gt; value2)&#123;</span><br><span class="line">		return 1;</span><br><span class="line">	&#125;else &#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">values.sort(compare);</span><br><span class="line">alert(values); // 0,1,5,10,15</span><br></pre></td></tr></table></figure></p>
+<p>操作方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;];</span><br><span class="line">var colors2 = colors.concat(&quot;yellow&quot;,[&quot;black&quot;,&quot;brown&quot;]); // 将参数添加到副本末尾</span><br><span class="line">alert(colors); //red,green,blue</span><br><span class="line">alert(colors2); //red,green,blue,yellow,black,brown</span><br><span class="line"></span><br><span class="line">var colors3 = colors2.slice(1,4); // 返回起始位置和结束位置(不包括)之间的项</span><br><span class="line">alert(colors3); //green,blue,yellow</span><br><span class="line"></span><br><span class="line">var removed = colors.splice(0,1); //删除0位置的1项</span><br><span class="line">alert(colors); // green,blue</span><br><span class="line">alert(removed); // red</span><br><span class="line">var removed = colors.splice(1, 0, &quot;yellow&quot;, &quot;orange&quot;); //位置1，插入2项</span><br><span class="line">alert(colors); // green,yellow,orange,blue</span><br><span class="line">alert(removed); // 空数组</span><br><span class="line">var removed = colors.splice(1, 1, &quot;red&quot;, &quot;purple&quot;); //位置1的1项改为2项</span><br><span class="line">alert(colors); // green,red,purple,orange,blue</span><br><span class="line">alert(removed); // yellow</span><br></pre></td></tr></table></figure></p>
+<p>迭代方法，包括every(),filter(),foreach(),map(),some()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var numbers = [1,2,3,4,5];</span><br><span class="line">var result = numbers.forEach(function(item,index,array)&#123;</span><br><span class="line">    return (item+1);</span><br><span class="line">&#125;);</span><br><span class="line">alert(result); // 2,3,4,5,6</span><br></pre></td></tr></table></figure></p>
+<h3 id="Function类型"><a href="#Function类型" class="headerlink" title="Function类型"></a>Function类型</h3><p>每个函数都是Function类型的实例，而且与其他引用类型一样具有属性和方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//函数声明</span><br><span class="line">function sum1 (num1, num2) &#123;</span><br><span class="line">	return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//函数表达式</span><br><span class="line">var sum2 = function(num1, num2)&#123;</span><br><span class="line">	return num1 + num2;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">//函数名是一个指向函数对象的指针</span><br><span class="line">var anotherSum = sum1;</span><br><span class="line">alert(anotherSum(1,2)); // 3</span><br></pre></td></tr></table></figure></p>
+<p>解析器会率先读取函数声明，而函数表达式不会。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert (sum(1,2));</span><br><span class="line">var sum = function(num1, num2)&#123;</span><br><span class="line">	return num1 + num2;</span><br><span class="line">&#125;;                       //报错</span><br></pre></td></tr></table></figure></p>
+<h5 id="函数的属性和方法"><a href="#函数的属性和方法" class="headerlink" title="函数的属性和方法"></a>函数的属性和方法</h5><p>在函数内部有两个特殊的对象：arguments 和 this<br>arguments主要用于保存函数参数，该对象有一个callee的属性，指向拥有arguments对象的函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function factorial (num) &#123;       //递归算法</span><br><span class="line">	if (num &lt;=1) &#123;</span><br><span class="line">		return 1;</span><br><span class="line">	&#125;else &#123;</span><br><span class="line">		return num * arguments.callee(num-1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>this引用是函数执行的环境对象，当在全局作用域中调用函数时，this对象引用的就是window。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">window.color = &quot;red&quot;;</span><br><span class="line">function sayColor() &#123;</span><br><span class="line">	alert (this.color);</span><br><span class="line">&#125;</span><br><span class="line">sayColor(); //red</span><br></pre></td></tr></table></figure></p>
+<p>每个函数都包含两个属性： length 和 prototype ,length属性表示函数希望接收的参数的个数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function sum(num1, num2) &#123;</span><br><span class="line">	return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">alert(sum.length); //2</span><br></pre></td></tr></table></figure></p>
+<p>每个函数都包含两个非继承而来的方法： apply() 和 call（）,还有ES5定义的bind()方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">window.color = &quot;red&quot;;</span><br><span class="line">var o = &#123; color: &quot;blue&quot; &#125;;</span><br><span class="line">function sayColor() &#123;</span><br><span class="line">	alert (this.color);</span><br><span class="line">&#125;</span><br><span class="line">sayColor(o); //blue , 改变函数的作用域</span><br></pre></td></tr></table></figure></p>
+<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3><p>为方便操作基本类型值，ECMAScript 还提供了3个特殊的引用类型： Boolean , Number 和 String<br>实际上，每读取一个基本类型值的时候，后台就会自动创建一个对应的基本包装类型的对象，方便我们调用一些方法。这个自动创建的对象只存在于代码执行的瞬间，然后就会被销毁。</p>
+<h5 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//Boolean类型</span><br><span class="line">var falseObject = new Boolean(false);</span><br><span class="line">var result = falseObject &amp;&amp; true;</span><br><span class="line">alert(result); //true</span><br><span class="line"></span><br><span class="line">//基本类型</span><br><span class="line">var falseValue = false;</span><br><span class="line">var result = falseValue &amp;&amp; true;</span><br><span class="line">alert(result); //false</span><br></pre></td></tr></table></figure>
+<p>由于Boolean对象是Boolean类型的实例，布尔表达式中对象会被转化为true;<br>Boolean对象和基本类型在使用typeOf 和 instanceof 返回值不同;<br>建议永远不要使用Boolean对象。</p>
+<h5 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var numberObject = new Number(10);</span><br><span class="line">var numberValue = 10;</span><br><span class="line">alert(typeOf numberObject); // &quot;object&quot;</span><br><span class="line">alert(typeOf numberValue); // &quot;number&quot; </span><br><span class="line">alert(numberObject instanceof Number); // true</span><br><span class="line">alert(numberValue instanceof Number); //false</span><br></pre></td></tr></table></figure>
+<p>由于Number对象和基本类型数值在使用typeOf 和 instanceof 返回值不同，不建议实例化Number。</p>
+<h5 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h5><p>String类型是字符串的对象包装类型，可以使用String构造函数来创建<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var stringObject = new String(&quot;Hello world&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>String类型的每个实例都有一个length属性和许多方法</p>
+<ol>
+<li><p>字符方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var stringValue = &quot;hello world&quot;;</span><br><span class="line">alert(stringValue.charAt(1)); // &quot;e&quot;</span><br><span class="line">alert(stringValue.charCodeAt(1)); // &quot;101&quot;,对应字符的编码</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串操作方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var stringValue = &quot;hello &quot;;</span><br><span class="line">var result = stringValue.concat(&quot;world&quot;); //拼接</span><br><span class="line">alert(result);  // &quot;hello world&quot;</span><br><span class="line">alert(stringValue); // &quot;hello &quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var stringValue = &quot;hello world&quot;;</span><br><span class="line">alert(stringValue.slice(3,7));     // &quot;lo w&quot;,7是到哪里之前停</span><br><span class="line">alert(stringValue.substring(3,7)); // &quot;lo w&quot;,同上</span><br><span class="line">alert(stringValue.substr(3,7));    //&quot;lo worl&quot;,7为个数</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>字符串位置方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var stringValue = &quot;hello world&quot;;</span><br><span class="line">alert(stringValue.indexOf(&quot;o&quot;,6)); // 7,正着从第6个开始数</span><br><span class="line">alert(stringValue.lastIndexOf(&quot;o&quot;,6)); // 4,倒着从第6个开始数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>trim() 方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var stringValue = &quot;   hello world    &quot;;</span><br><span class="line">var trimmedStringValue = stringValue.trim(); //删除前置及后缀空格</span><br><span class="line">alert(stringValue); // &quot;   hello world    &quot;</span><br><span class="line">alert(trimmedStringValue); // &quot;hello world&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>除此之外还有 字符串大小写转换方法，字符串模式匹配方法，localeCompare()方法等。</p>
+<h3 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h3><ol>
+<li>Date类型，提供日期和时间信息</li>
+<li>RegExp类型，是ES支持正则表达式的一个接口</li>
+<li>作用域中的两个内置对象： Global 和 Math</li>
+</ol>
+<p>参考书籍：JavaScript高级程序设计–【美】Nicholas C.Zakas</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/ligaoyan/ligaoyan.github.io.git/images/avatar.png"
+                alt="ligaoyan" />
+            
+              <p class="site-author-name" itemprop="name">ligaoyan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/ligaoyan/ligaoyan.github.io.git/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/ligaoyan/ligaoyan.github.io.git/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/ligaoyan/ligaoyan.github.io.git/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ligaoyan</span>
+
+  
+  <br />
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+  </div>
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/ligaoyan/ligaoyan.github.io.git/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
