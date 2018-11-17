@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="reading nodes," />
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta name="keywords" content="css js DOM">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lgy的博客">
-<meta property="og:url" content="http://ligaoyan.github.io/index.html">
+<meta name="description" content="1.工厂模式一种用函数来封装以特定接口创建对象的方法。123456789101112function createPerson(name, age, job)&amp;#123;	var o = new Object();	o.name = name;	o.age = age;	o.job = job;	o.sayName = function()&amp;#123;		alert(this.name);	&amp;#1">
+<meta name="keywords" content="reading nodes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中创建对象">
+<meta property="og:url" content="http://ligaoyan.github.io/2018/11/17/JS中创建对象/index.html">
 <meta property="og:site_name" content="lgy的博客">
+<meta property="og:description" content="1.工厂模式一种用函数来封装以特定接口创建对象的方法。123456789101112function createPerson(name, age, job)&amp;#123;	var o = new Object();	o.name = name;	o.age = age;	o.job = job;	o.sayName = function()&amp;#123;		alert(this.name);	&amp;#1">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-17T04:56:44.931Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lgy的博客">
+<meta name="twitter:title" content="JS中创建对象">
+<meta name="twitter:description" content="1.工厂模式一种用函数来封装以特定接口创建对象的方法。123456789101112function createPerson(name, age, job)&amp;#123;	var o = new Object();	o.name = name;	o.age = age;	o.job = job;	o.sayName = function()&amp;#123;		alert(this.name);	&amp;#1">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://ligaoyan.github.io/"/>
+  <link rel="canonical" href="http://ligaoyan.github.io/2018/11/17/JS中创建对象/"/>
 
 
 
 
 
-  <title>lgy的博客</title>
+  <title>JS中创建对象 | lgy的博客</title>
   
 
 
@@ -141,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -267,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/17/JS中创建对象/" itemprop="url">JS中创建对象</a></h1>
+          <h1 class="post-title" itemprop="name headline">JS中创建对象</h1>
         
 
         <div class="post-meta">
@@ -341,9 +342,7 @@
       
 
       
-        
-          
-            <h3 id="1-工厂模式"><a href="#1-工厂模式" class="headerlink" title="1.工厂模式"></a>1.工厂模式</h3><p>一种用函数来封装以特定接口创建对象的方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function createPerson(name, age, job)&#123;</span><br><span class="line">	var o = new Object();</span><br><span class="line">	o.name = name;</span><br><span class="line">	o.age = age;</span><br><span class="line">	o.job = job;</span><br><span class="line">	o.sayName = function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">	return o;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person1 = createPerson(&quot;Nicholas&quot;, 29, &quot;Software Engineer&quot;);</span><br></pre></td></tr></table></figure></p>
+        <h3 id="1-工厂模式"><a href="#1-工厂模式" class="headerlink" title="1.工厂模式"></a>1.工厂模式</h3><p>一种用函数来封装以特定接口创建对象的方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function createPerson(name, age, job)&#123;</span><br><span class="line">	var o = new Object();</span><br><span class="line">	o.name = name;</span><br><span class="line">	o.age = age;</span><br><span class="line">	o.job = job;</span><br><span class="line">	o.sayName = function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">	return o;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person1 = createPerson(&quot;Nicholas&quot;, 29, &quot;Software Engineer&quot;);</span><br></pre></td></tr></table></figure></p>
 <p>工厂模式虽然解决了创建多个相似对象的问题，但没有解决对象识别问题。</p>
 <h3 id="2-构造函数模式"><a href="#2-构造函数模式" class="headerlink" title="2.构造函数模式"></a>2.构造函数模式</h3><p>我们可以创建自定义的构造函数，从而定义自定义对象类型的属性和方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function Person(name, age, job)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.age = age;</span><br><span class="line">	this.job = job;</span><br><span class="line">	this.sayName = function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person1 = new Person(&quot;Nicholas&quot;, 29, &quot;Software Engineer&quot;);</span><br><span class="line">var person2 = new Person(&quot;Greg&quot;, 25, &quot;Teacher&quot;);</span><br><span class="line"></span><br><span class="line">alert (person1.constructor == Person); // true</span><br><span class="line">alert (person2.constructor == Person); // true</span><br><span class="line">alert (person1 instanceof Object); //true</span><br><span class="line">alert (person1 instanceof Person); //true</span><br><span class="line">alert (person1.sayName == person2.sayName); //false</span><br></pre></td></tr></table></figure></p>
 <p>注意：函数名Person的首字母大写，构造函数始终都应该以一个大写字母开头；<br>     要创建Person的新实例，必须使用new操作符。<br>构造函数与其它函数的唯一区别，就在于通过new操作符来调用。</p>
@@ -364,8 +363,6 @@
 <p>注意，以这种模式创建的对象中，除了使用sayName()方法外，没有别的办法访问name的值。</p>
 <p>参考书籍：《JavaScript高级程序设计》，作者：【美】 Nicholas C.Zakas</p>
 
-          
-        
       
     </div>
     
@@ -380,14 +377,36 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/reading-nodes/" rel="tag"># reading nodes</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/08/JS的引用类型/" rel="next" title="JS的引用类型">
+                <i class="fa fa-chevron-left"></i> JS的引用类型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -397,14 +416,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -412,6 +428,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -432,8 +452,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -497,6 +526,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-工厂模式"><span class="nav-number">1.</span> <span class="nav-text">1.工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-构造函数模式"><span class="nav-number">2.</span> <span class="nav-text">2.构造函数模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-原型模式"><span class="nav-number">3.</span> <span class="nav-text">3.原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-组合使用构造函数模式和原型模式"><span class="nav-number">4.</span> <span class="nav-text">4.组合使用构造函数模式和原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-动态原型模式"><span class="nav-number">5.</span> <span class="nav-text">5.动态原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-寄生构造函数模式"><span class="nav-number">6.</span> <span class="nav-text">6.寄生构造函数模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-稳妥构造函数模式"><span class="nav-number">7.</span> <span class="nav-text">7.稳妥构造函数模式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -644,6 +689,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
