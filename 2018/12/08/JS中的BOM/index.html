@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="reading nodes," />
 
 
 
@@ -79,14 +79,20 @@
 
 
 
-<meta name="keywords" content="css js DOM">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lgy的博客">
-<meta property="og:url" content="http://ligaoyan.github.io/index.html">
+<meta name="description" content="1. BOMBOM(Browers Object Model)是浏览器对象模型，通过JS操作BOM来控制浏览器的各种行为。BOM对象如下图所示。Window对象的子对象：  document子对象，DOM的对象，文档对象模型 frames子对象，浏览器框架集合对象 history子对象，浏览器历史信息对象 location子对象，浏览器位置信息对象 navigator子对象，浏览器导航对象，存放浏">
+<meta name="keywords" content="reading nodes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中的BOM">
+<meta property="og:url" content="http://ligaoyan.github.io/2018/12/08/JS中的BOM/index.html">
 <meta property="og:site_name" content="lgy的博客">
+<meta property="og:description" content="1. BOMBOM(Browers Object Model)是浏览器对象模型，通过JS操作BOM来控制浏览器的各种行为。BOM对象如下图所示。Window对象的子对象：  document子对象，DOM的对象，文档对象模型 frames子对象，浏览器框架集合对象 history子对象，浏览器历史信息对象 location子对象，浏览器位置信息对象 navigator子对象，浏览器导航对象，存放浏">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ligaoyan.github.io/2018/12/08/JS中的BOM/BOM对象.jpg">
+<meta property="og:updated_time" content="2018-12-08T12:34:47.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lgy的博客">
+<meta name="twitter:title" content="JS中的BOM">
+<meta name="twitter:description" content="1. BOMBOM(Browers Object Model)是浏览器对象模型，通过JS操作BOM来控制浏览器的各种行为。BOM对象如下图所示。Window对象的子对象：  document子对象，DOM的对象，文档对象模型 frames子对象，浏览器框架集合对象 history子对象，浏览器历史信息对象 location子对象，浏览器位置信息对象 navigator子对象，浏览器导航对象，存放浏">
+<meta name="twitter:image" content="http://ligaoyan.github.io/2018/12/08/JS中的BOM/BOM对象.jpg">
 
 
 
@@ -116,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://ligaoyan.github.io/"/>
+  <link rel="canonical" href="http://ligaoyan.github.io/2018/12/08/JS中的BOM/"/>
 
 
 
 
 
-  <title>lgy的博客</title>
+  <title>JS中的BOM | lgy的博客</title>
   
 
 
@@ -141,8 +147,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,9 +240,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -267,9 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/08/JS中的BOM/" itemprop="url">JS中的BOM</a></h1>
+          <h1 class="post-title" itemprop="name headline">JS中的BOM</h1>
         
 
         <div class="post-meta">
@@ -341,9 +344,7 @@
       
 
       
-        
-          
-            <h3 id="1-BOM"><a href="#1-BOM" class="headerlink" title="1. BOM"></a>1. BOM</h3><p>BOM(Browers Object Model)是浏览器对象模型，通过JS操作BOM来控制浏览器的各种行为。<br>BOM对象如下图所示。<br><img src="/2018/12/08/JS中的BOM/BOM对象.jpg" alt=""><br>Window对象的子对象：</p>
+        <h3 id="1-BOM"><a href="#1-BOM" class="headerlink" title="1. BOM"></a>1. BOM</h3><p>BOM(Browers Object Model)是浏览器对象模型，通过JS操作BOM来控制浏览器的各种行为。<br>BOM对象如下图所示。<br><img src="/2018/12/08/JS中的BOM/BOM对象.jpg" alt=""><br>Window对象的子对象：</p>
 <ul>
 <li>document子对象，DOM的对象，文档对象模型</li>
 <li>frames子对象，浏览器框架集合对象</li>
@@ -554,8 +555,6 @@
 <p>虽然history并不常用，但在创建自定义的“后退”和“前进”按钮，以及检测当前页面是不是用户历史记录中的第一个页面时，还是必须使用它。</p>
 <p>参考书籍：《JavaScript高级程序设计》，作者：【美】 Nicholas C.Zakas</p>
 
-          
-        
       
     </div>
     
@@ -570,14 +569,36 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/reading-nodes/" rel="tag"># reading nodes</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/02/JS的函数表达式/" rel="next" title="JS的函数表达式">
+                <i class="fa fa-chevron-left"></i> JS的函数表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -587,14 +608,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -602,6 +620,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -622,8 +644,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -687,6 +718,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-BOM"><span class="nav-number">1.</span> <span class="nav-text">1. BOM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Window对象"><span class="nav-number">2.</span> <span class="nav-text">2. Window对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-frames对象"><span class="nav-number">3.</span> <span class="nav-text">3. frames对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-location对象"><span class="nav-number">4.</span> <span class="nav-text">4. location对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-navigator对象"><span class="nav-number">5.</span> <span class="nav-text">5. navigator对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-screen对象"><span class="nav-number">6.</span> <span class="nav-text">6. screen对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-history对象"><span class="nav-number">7.</span> <span class="nav-text">7. history对象</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -835,6 +882,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
