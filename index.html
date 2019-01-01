@@ -352,6 +352,72 @@
 <h5 id="6-子代选择器"><a href="#6-子代选择器" class="headerlink" title="6. 子代选择器"></a>6. 子代选择器</h5><p>如果希望h1元素的子代中的em元素应用样式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1&gt;em &#123;color:red;&#125;</span><br></pre></td></tr></table></figure></p>
 <h5 id="7-相邻兄弟选择器"><a href="#7-相邻兄弟选择器" class="headerlink" title="7. 相邻兄弟选择器"></a>7. 相邻兄弟选择器</h5><p>如果选择紧接在h1元素后的em元素，两者为兄弟关系，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1 + em &#123;color:red;&#125;</span><br></pre></td></tr></table></figure></p>
 <h5 id="8-选择器分组"><a href="#8-选择器分组" class="headerlink" title="8. 选择器分组"></a>8. 选择器分组</h5><p>不同选择器之间用(,)分隔。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body, h2, p &#123;color:gray;&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="9-伪类选择器"><a href="#9-伪类选择器" class="headerlink" title="9. 伪类选择器"></a>9. 伪类选择器</h5><p>伪类选择器可以为某些元素（甚至是文档本身）的状态所指示的幻想类指定样式。</p>
+<ol>
+<li>链接伪类</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">伪类名</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">:link</td>
+<td style="text-align:center">指示作为超链接（即有一个href属性）并指向一个未访问地址的所有锚</td>
+</tr>
+<tr>
+<td style="text-align:center">:visited</td>
+<td style="text-align:center">指示作为已访问地址超链接的所有锚</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>动态伪类</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">伪类名</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">:focus</td>
+<td style="text-align:center">指示当前拥有输入焦点的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">:hover</td>
+<td style="text-align:center">指示鼠标停留在哪个元素上</td>
+</tr>
+<tr>
+<td style="text-align:center">:active</td>
+<td style="text-align:center">指示被用户输入激活的元素</td>
+</tr>
+</tbody>
+</table>
+<p>动态伪类可以应用到任何元素上。<br>伪类的顺序很重要，通常是“link-visited-focus-hover-active”。</p>
+<ol start="3">
+<li>选择第一个子元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p:first-child &#123;font-weight: bold;&#125;</span><br><span class="line">li:first-child &#123;background: yellow;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>将作为某一个元素第一个子元素的所有p元素（li元素）设置为粗体。<br>这里不要理解错了，应该注意。</p>
+<h5 id="10-伪元素选择器"><a href="#10-伪元素选择器" class="headerlink" title="10. 伪元素选择器"></a>10. 伪元素选择器</h5><p>伪元素能够在文档中插入假想的元素，从而得到某种效果。</p>
+<ol>
+<li><p>设置首字母样式<br>用于设置一个块级元素首字母的样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p:first-letter &#123;color: red;&#125; //</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置第一行的样式<br>用来设置元素中第一行的文本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p:first-line &#123;color: red;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置之前和之后元素的样式<br>假设要在每个h2元素前加一对银色中括号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h2:before &#123;content: &quot;]]&quot;; color: silver;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>要在一个元素后面插入内容并设置样式，可以使用伪元素:after。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">body:after &#123;content: &quot; The End.&quot;&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-结构和层叠"><a href="#2-结构和层叠" class="headerlink" title="2.结构和层叠"></a>2.结构和层叠</h3><h5 id="1-选择器的特殊性"><a href="#1-选择器的特殊性" class="headerlink" title="1. 选择器的特殊性"></a>1. 选择器的特殊性</h5><p>如果一个元素有两个或多个冲突的属性声明，那么有最高特殊性的声明就会胜出。声明也分为重要声明（就是!important）和非重要声明。这两类声明解决冲突的规则入下：<br>(1) 对于重要声明就没有特殊性一说,非重要声明的解决冲突使用特殊性,重要声明与非重要声明发生冲突时，胜出的总是重要声明<br>(2) 非重要声明的特殊性由选择器本身确定。特殊性值表述为4个部分，如0，0，0，0.</p>
 <ul>
 <li>对于内联样式特殊性加1，0，0，0；</li>
@@ -361,7 +427,16 @@
 <li>对于通配选择器的特殊性加0，0，0，0；（这个和没有特殊性不一样）</li>
 </ul>
 <p>(3) 对于子元素从父元素继承来的值是没有特殊性的，因此通配选择器会覆盖继承来的值。<br>(4) 如果特殊性相同的两个规则同时应用到同一个元素，则按照声明的顺序进行排序，一个声明在文档中越后出现，权重越大。导入样式表的出现顺序一般认为出现在主样式表的前面。<br>(5) 以及按角色分为创作人员样式、读者样式和用户代理样式。其中用户代理样式的优先级最低。一般而言创作人员样式优先级最高，除了读者样式设置为!important的情况，这种情况就算是创作人员样式设置为!important都是比他弱的。</p>
-<h5 id="2-继承"><a href="#2-继承" class="headerlink" title="2. 继承"></a>2. 继承</h5><p>css不可继承的属性有：大多数框模型属性（外边距、内边距、背景和边框）。<br>css可继承的属性有：颜色，文字，字体间距行高对齐方式，和列表的样式可以继承<br>所有元素可继承：visibility和cursor。<br>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、font-family、font-size、font-style、font-variant、font-weight、text-decoration、text-transform、direction。<br>终端块状元素可继承：text-indent和text-align。<br>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</p>
+<h5 id="2-继承"><a href="#2-继承" class="headerlink" title="2. 继承"></a>2. 继承</h5><ul>
+<li>css不可继承的属性有：大多数框模型属性（外边距、内边距、背景和边框）。</li>
+<li>css可继承的属性有：颜色，文字，字体间距行高对齐方式，和列表的样式可以继承</li>
+<li>所有元素可继承：visibility和cursor。</li>
+<li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、font-family、font-size、font-style、font-variant、font-weight、text-decoration、text-transform、direction。</li>
+<li>终端块状元素可继承：text-indent和text-align。</li>
+<li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li>
+</ul>
+<p>继承的值没有特殊性。通配选择器有0特殊性。0特殊性要比无特殊性要强。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;color: gray;&#125;</span><br><span class="line">h1.page-title &#123;color: black;&#125;</span><br><span class="line"></span><br><span class="line">&lt;h1 class=&quot;page-title&quot;&gt;&lt;p&gt;hello world&lt;/p&gt;&lt;/h1&gt;</span><br></pre></td></tr></table></figure></p>
+<p>p元素里的内容显示为灰色。</p>
 <h5 id="3-层叠"><a href="#3-层叠" class="headerlink" title="3. 层叠"></a>3. 层叠</h5><p>(1) 找出所有相关的规则，这些规则都包含与一个给定元素匹配的选择器。<br>(2) 按显式权重对应用到该元素的所有声明进行排序，有!important标志的声明的权重要高于不带!important标志的声明。<br>(3) 按来源对应用到给定元素的所有声明进行排序。正常情况下，创作人员的样式要胜过读者的样式。有!important标志的的读者样式要强于所有其他样式，包括有!important标志的创作人员样式。创作人员的样式和读者样式斗都比用户代理的默认样式强。<br>(4) 按特殊性对应用到给定元素的所有声明进行排序，有较高特殊性的元素权重要大于有较低特殊性的元素。<br>(5) 按出现顺序对应用到给定元素的所有声明进行排序，后面出现的声明权重要大于前面出现的声明，即后定义的样式会覆盖前面定义的样式。</p>
 <h3 id="3-值和单位"><a href="#3-值和单位" class="headerlink" title="3.值和单位"></a>3.值和单位</h3><h5 id="1-颜色"><a href="#1-颜色" class="headerlink" title="1. 颜色"></a>1. 颜色</h5><p>CSS中颜色表示方法有命名颜色、用RGB指定颜色（百分数记法、整数三元组记法）和十六进制RGB颜色，如下表。</p>
 <table>
@@ -565,7 +640,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
