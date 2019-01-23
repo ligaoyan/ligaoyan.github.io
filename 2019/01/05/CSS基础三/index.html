@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="lgy的博客">
 <meta property="og:description" content="1.CSS框模型CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边框和外边距的方式。元素的背景应用于由内容和内边距、边框组成的区域。许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式，如下：1234* &amp;#123;  margin: 0;  padding: 0;&amp;#125;  内边距元素的内边距">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-05T03:49:53.702Z">
+<meta property="og:updated_time" content="2019-01-23T13:09:17.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS基础三">
 <meta name="twitter:description" content="1.CSS框模型CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边框和外边距的方式。元素的背景应用于由内容和内边距、边框组成的区域。许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式，如下：1234* &amp;#123;  margin: 0;  padding: 0;&amp;#125;  内边距元素的内边距">
@@ -381,7 +381,19 @@
 <li><p>块级元素和行内元素<br>块级元素：div\p\form\table\header\footer\section\h1-6<br>行内元素：span\i\a\input\button\label\select</p>
 </li>
 </ol>
-<p>参考网页：<a href="https://www.w3cschool.cn/css/css_syntax.asp" target="_blank" rel="noopener">W3Cschool javascript教程</a><br>参考书籍：《CSS权威指南》，作者：Eric A.Meyer</p>
+<ul>
+<li>块级元素独自占一行且宽度会占满父元素宽度，行内元素不会独占一行</li>
+<li>块级元素可以设置weith和height，行内元素设置width和height无效</li>
+<li>块级元素可以设置margin和padding属性，行内元素水平方向的margin和padding如margin-left、padding-right可以产生边距效果，但是竖直方向的如padding-top和margin-bottom不会产生边距效果</li>
+<li>display：inline-block；可以让元素具有块级元素和行内元素的特性：既可以设置长宽，可以让padding和margin生效，又可以和其他行内元素并排。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>行内元素尽量只包含行内元素</li>
+<li>p标签和h1标签文字类块级元素，里面不能放块级元素</li>
+<li>a标签不能嵌套，但a里可以放块级元素    </li>
+</ul>
+<p>参考网页：<a href="https://www.w3cschool.cn/css/css_syntax.asp" target="_blank" rel="noopener">W3Cschool CSS教程</a><br>参考书籍：《CSS权威指南》，作者：Eric A.Meyer</p>
 
       
     </div>
@@ -421,6 +433,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/23/CSS基础四/" rel="prev" title="CSS基础四">
+                CSS基础四 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -501,7 +517,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

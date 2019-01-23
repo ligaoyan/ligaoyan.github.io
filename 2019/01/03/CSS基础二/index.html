@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="lgy的博客">
 <meta property="og:description" content="1.CSS字体1.字体系列在 CSS 中，有两种不同类型的字体系列，通用字体系列和特定字体系列（比如 “Times” 或 “Courier”）。CSS 定义的 5 种通用字体系列为：  Serif 字体，包括Times、Georgia和New Century Schoolbook。 Sans-serif 字体，包括Helvetica、Geneva、Verdana、Arial、Univers。 Mo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-03T12:54:26.060Z">
+<meta property="og:updated_time" content="2019-01-23T13:13:49.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS基础二">
 <meta name="twitter:description" content="1.CSS字体1.字体系列在 CSS 中，有两种不同类型的字体系列，通用字体系列和特定字体系列（比如 “Times” 或 “Courier”）。CSS 定义的 5 种通用字体系列为：  Serif 字体，包括Times、Georgia和New Century Schoolbook。 Sans-serif 字体，包括Helvetica、Geneva、Verdana、Arial、Univers。 Mo">
@@ -403,8 +403,10 @@
 <li>上、下外边距为负时，有一种“拉近”的感觉。</li>
 </ul>
 <h5 id="3-行内元素"><a href="#3-行内元素" class="headerlink" title="3.行内元素"></a>3.行内元素</h5><ol>
-<li>基本术语和概念<br><strong>匿名文本</strong>，是指所有未包含在行内元素中的字符串。<p>I’m<em>so</em>happy!</p>序列中I’m和happy!都是匿名文本。<br><strong>em框</strong>，em框在字体中定义，也成为字符框。实际的字形可能比其em框更高或更矮。font-size值确定了各个em框的高度。<br><strong>内容区</strong>，在非替换元素中，内容区可能有两种。内容区可以是元素中个字符的em框串在一起构成的框，也可以是由元素中字符字形描述的框。<br><strong>行间距</strong>，是font-size值和line-height值只差，这个差实际上要分为两半，分别应用到内容区的顶部和底部。为内容区增加的这两部分分别称为版兼具。行内距只应用于非替换元素。<br><strong>行内框</strong>，这个框通过向内容区增加行间距来描述。对于非替换元素，袁术行内框的高度刚好等于line-height的值。对于替换元素，元素行内框的高度则恰好等于内容区的高度，因为行间距不应用到替换元素。<br><strong>行框</strong>，这个包含该行中出现的行内框的最高点和最低点的最小框。换句话说，行框的上边界要位于最高行内框的上边界，而行框的底边要放在最低行内框的下边界。</li>
+<li>基本术语和概念<br><strong>匿名文本</strong>，是指所有未包含在行内元素中的字符串。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;I&apos;m&lt;em&gt;so&lt;/em&gt;happy!&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<p>序列中I’m和happy!都是匿名文本。<br><strong>em框</strong>，em框在字体中定义，也成为字符框。实际的字形可能比其em框更高或更矮。font-size值确定了各个em框的高度。<br><strong>内容区</strong>，在非替换元素中，内容区可能有两种。内容区可以是元素中个字符的em框串在一起构成的框，也可以是由元素中字符字形描述的框。<br><strong>行间距</strong>，是font-size值和line-height值只差，这个差实际上要分为两半，分别应用到内容区的顶部和底部。为内容区增加的这两部分分别称为版兼具。行内距只应用于非替换元素。<br><strong>行内框</strong>，这个框通过向内容区增加行间距来描述。对于非替换元素，袁术行内框的高度刚好等于line-height的值。对于替换元素，元素行内框的高度则恰好等于内容区的高度，因为行间距不应用到替换元素。<br><strong>行框</strong>，这个包含该行中出现的行内框的最高点和最低点的最小框。换句话说，行框的上边界要位于最高行内框的上边界，而行框的底边要放在最低行内框的下边界。</p>
 <ul>
 <li>内容区类似于一个块级元素的内容框。</li>
 <li>行内元素的背景应用于内容区及所有内边距。</li>
@@ -552,7 +554,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
