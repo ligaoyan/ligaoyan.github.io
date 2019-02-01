@@ -250,7 +250,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/01/03/CSS基础二/">
+    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/01/05/CSS基础三/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ligaoyan">
@@ -269,7 +269,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/03/CSS基础二/" itemprop="url">CSS基础二</a></h1>
+                <a class="post-title-link" href="/2019/01/05/CSS基础三/" itemprop="url">CSS基础三</a></h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T20:50:40+08:00">
-                2019-01-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-05T11:47:53+08:00">
+                2019-01-05
               </time>
             
 
@@ -343,95 +343,58 @@
       
         
           
-            <h3 id="1-CSS字体"><a href="#1-CSS字体" class="headerlink" title="1.CSS字体"></a>1.CSS字体</h3><h5 id="1-字体系列"><a href="#1-字体系列" class="headerlink" title="1.字体系列"></a>1.字体系列</h5><p>在 CSS 中，有两种不同类型的字体系列，通用字体系列和特定字体系列（比如 “Times” 或 “Courier”）。<br>CSS 定义的 5 种通用字体系列为：</p>
-<ul>
-<li>Serif 字体，包括Times、Georgia和New Century Schoolbook。</li>
-<li>Sans-serif 字体，包括Helvetica、Geneva、Verdana、Arial、Univers。</li>
-<li>Monospace 字体，包括Courier、Courier New、Andale Mono。</li>
-<li>Cursive 字体，包括Zapf Chancery、Author和Comic Sans。</li>
-<li>Fantasy 字体，包括Western、Woodblock和Klingon。<br>使用通用字体系列而不关心是具体哪一种字体，可以像下面一样：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body &#123;font-family: sans-serif;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>使用特定字体系列，可以使用一个或多个候选字体，或者结合特定字体名和通用字体系列，以保证达到预期或者接近的文档。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;font-family: Georgia;&#125;</span><br><span class="line">p &#123;font-family: Times, TimesNR, &apos;New Century Schoolbook&apos;, Georgia;&#125; // 多个候选字体</span><br><span class="line">h2 &#123;font-family: Georgia, serif;&#125; // 结合特定字体名和通用字体系列</span><br></pre></td></tr></table></figure></p>
-<p>使用引号:有当字体名中有一个或多个空格（比如 New York），或者如果字体名包括 # 或 $ 之类的符号，才需要在 font-family 声明中加引号。</p>
-<h5 id="2-字体加粗"><a href="#2-字体加粗" class="headerlink" title="2.字体加粗"></a>2.字体加粗</h5><p>font-weight：normal、bold、bolder、lighter、100、200…800、900、inherit<br>使用bold关键字可以将文本设置为粗体。</p>
-<p>关键字100 ~ 900为字体指定了9级加粗度。如果一个字体内置了这些加粗级别，那么这些数字就直接映射到预定义的级别，100对应最细的字体变形，900 对应最粗的字体变形。数字400等价于normal，而700等价于bold。</p>
-<p>如果将元素的加粗设置为bolder，浏览器会设置比所继承值更粗的一个字体加粗。与此相反，关键词lighter会导致浏览器将加粗度下移而不是上移。</p>
-<h5 id="3-字体大小"><a href="#3-字体大小" class="headerlink" title="3.字体大小"></a>3.字体大小</h5><p>font-size用来设置字体的大小。font-size值可以是绝对或相对值。<br>font-size:XX-small,X-small,small,medium,large,X-large,XX-large,smaller,larger,length,percentage,inherit;<br>如果没有规定字体大小，普通文本的默认大小是16像素(16px=1em)。</p>
+            <h3 id="1-CSS框模型"><a href="#1-CSS框模型" class="headerlink" title="1.CSS框模型"></a>1.CSS框模型</h3><p>CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边框和外边距的方式。<br>元素的背景应用于由内容和内边距、边框组成的区域。<br>许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  padding: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ol>
-<li>使用像素来设置字体大小<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123;font-size:14px;&#125;</span><br></pre></td></tr></table></figure>
+<li>内边距<br>元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性。<br>padding 属性接受长度值或百分比值，但不允许使用负值。<br>padding-top,padding-right,padding-bottom,padding-right分别设置内边距的上、左、下、右的值。</li>
+<li>边框<br>CSS的border-style属性用来为边框定义样式，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p.aside &#123;border-style: solid dotted dashed double;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>在 Firefox, Chrome, and Safari 中，可以重新调整以上例子的文本大小，但是在 Internet Explorer 中不行。</p>
-<ol start="2">
-<li><p>使用em来设置字体大小<br>W3C推荐使用em尺寸单位。浏览器中默认的文本大小是16像素。因此1em的默认尺寸是16像素。<br>可以使用下面这个公式将像素转换为em：pixels/16=em</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;font-size:3.75em;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>结合使用百分比和em<br>在所有浏览器中均有效的方案是为body元素（父元素）以百分比设置默认的font-size值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body &#123;font-size:100%;&#125;</span><br><span class="line">h1 &#123;font-size:3.75em;&#125;</span><br><span class="line">h2 &#123;font-size:2.5em;&#125;</span><br><span class="line">p &#123;font-size:0.875em;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h5 id="4-风格和变形"><a href="#4-风格和变形" class="headerlink" title="4.风格和变形"></a>4.风格和变形</h5><p>font-style：italic（斜体）、oblique（倾斜）、normal、inherit<br>通常情况下，italic和oblique文本在web浏览器中看上去完全一样。<br>font-variant: small-caps,normal,inherit<br>small-caps要求使用小型大写字母文本。</p>
-<h5 id="5-font属性"><a href="#5-font属性" class="headerlink" title="5.font属性"></a>5.font属性</h5><p>font的前三个值是font-style，font-weight,font-variant这三个值的顺序随意、后两个值font-size/line-height、font-family则一定要以这个顺序，而且font声明中必须有这两个值。</p>
-<h3 id="2-CSS文本"><a href="#2-CSS文本" class="headerlink" title="2.CSS文本"></a>2.CSS文本</h3><h5 id="1-text-indent"><a href="#1-text-indent" class="headerlink" title="1.text-indent"></a>1.text-indent</h5><p>作用：用于首行缩进,针对块级元素。<br>值：length、百分数、inherit、number<br>百分数：相对于缩进元素父元素的宽度。即如果对一个div设置了这个属性，则百分数是相对于div的父元素。<br>继承：有</p>
-<h5 id="2-text-align"><a href="#2-text-align" class="headerlink" title="2.text-align"></a>2.text-align</h5><p>作用：影响元素中文本行相互之间的对齐方式。<br>值：left、center、right、justify、inherit。left、center、right导致文本的左中右对齐；justify是两端对齐。<br>继承：有<br>作用于：块级元素</p>
-<h5 id="3-line-height"><a href="#3-line-height" class="headerlink" title="3.line-height"></a>3.line-height</h5><p>作用：文本行基线之间的距离，而不是字体的大小，，确定了将各个元素框的高度增加或减少多少<br>值：normal、百分数、长度<br>normal：字体的1.2倍<br>百分数：相对于元素字体的大小<br>number：是一个缩放因子，用于解决font-size如果是百分比或者em为单位，会相对父元素的font-size计算出line-height然后由子元素继承，子元素从父元素继承line-height时，继承自父元素的line-height和子元素自身的font-size不匹配。使用缩放因子，子元素就继承的是这个因子而不是计算值，因此子元素再用这个因子计算出line-height的值。<br>应用：所有元素<br>继承：有<br>文本行、内容区和行内框的关系: line-height的值定义行内框的大小；font-size定义内容区的大小；行内框-内容区的部分就是行间距；所有行内框的最高顶部和最低底部就是行框的范围。</p>
-<h5 id="4-vertical-align"><a href="#4-vertical-align" class="headerlink" title="4.vertical-align"></a>4.vertical-align</h5><p>应用：行内元素和替换元素<br>值：baseline（默认）、sub、super、bottom、text-bottom、top、text-top、middle、百分数、数值<br>baseline：一个元素的基线和父元素的基线对齐。如果是图像、输入框这一类的替换元素，则该元素的底部和父元素的基线对齐<br>sub：使一个元素变成下标，该元素的基线（或是替换元素的底部）会低于父元素的基线，低多少由用户代理决定。super和sub相反<br>bottom：将元素行内框的底部和行框的底部对齐<br>text-bottom：指行内文本的底端。替换元素或任何其它类型的非文本元素会有一个默认的文本框。要对齐元素的行内框底端再与这个默认文本框底端对齐。<br>middle：往往（但并不总是）应用于图片，middle将元素行内框的中点与父元素基线上的0.5ex对齐。<br>百分数：将元素的基线（或替换元素的底边）相对于父元素基线升高或降低指定的量。这个百分数是相对于该元素line-height的百分数。<br>总结：可以看到所有垂直对齐的元素都会影响行高。行框的描述是，高度要足以包含最高行内框的顶端和最低行内框的底端。<br>继承：无</p>
-<h5 id="5-word-spacing"><a href="#5-word-spacing" class="headerlink" title="5.word-spacing"></a>5.word-spacing</h5><p>作用：字间隔，增加或减少单词之间的间隔<br>值：normal、inherit、数值<br>应用：所有元素<br>继承：有</p>
-<h5 id="6-letter-spacing"><a href="#6-letter-spacing" class="headerlink" title="6.letter-spacing"></a>6.letter-spacing</h5><p>作用：字母间隔，增加或减少字母之间的间隔<br>值：normal、inherit、数值<br>应用：所有元素<br>继承：有</p>
-<h5 id="7-text-transform"><a href="#7-text-transform" class="headerlink" title="7.text-transform"></a>7.text-transform</h5><p>作用：处理文本大小写<br>值：uppercase、lowercase、capitalize、none、inherit<br>uppercase、lowercase：将文本转换为全大写或全小写字符<br>capitalize：对每个单词首字母大写<br>应用：所有元素<br>继承：有</p>
-<h5 id="8-text-decoration"><a href="#8-text-decoration" class="headerlink" title="8.text-decoration"></a>8.text-decoration</h5><p>作用：文本装饰<br>值：none、underline、overline、line-through、blink<br>underline：对元素加下划线<br>overline：在文本顶端画一个上划线<br>line-through：在文本中画贯穿线<br>blink：文本闪烁<br>应用：所有元素<br>继承：无</p>
-<h5 id="9-text-shadow"><a href="#9-text-shadow" class="headerlink" title="9.text-shadow"></a>9.text-shadow</h5><p>作用：文本阴影<br>值：三个（color、length[左右偏移]、length[上下偏移]、length[阴影模糊半径]）<br>应用：所有元素<br>继承：无</p>
-<h5 id="10-white-space"><a href="#10-white-space" class="headerlink" title="10.white-space"></a>10.white-space</h5><p>作用：影响用户代理对源文档中的空格、换行和tab字符的处理<br>值：normal、nowrap、pre、pre-wrap、pre-line、inherit<br>pre：会保留空格，不换行<br>nowrap：不会保留空格，不换行<br>pre-wrap：会保留空格，换行<br>pre-line：不会保留空格，换行<br>应用：所有元素<br>继承：无</p>
-<h3 id="3-基本视觉格式化"><a href="#3-基本视觉格式化" class="headerlink" title="3.基本视觉格式化"></a>3.基本视觉格式化</h3><h5 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h5><p>(1)正常流：是指西方语言文本从左向右，从上向下显示。如果要让一个元素不在正常流中国，唯一的办法就是使之成为浮动或定位元素。<br>(2)非替换元素：如果元素的内容包含在文档中，则称之为非替换元素。<br>(3)替换元素：指用作为其他内容占位符的一个元素。例子：img中的图像<br>(4)块级元素：在正常流中，会在其框之前和之后生成“换行”所以出于正常流中的块级元素会垂直摆放。<br>(5)行内元素：不会再之前或之后生成行分隔符，它们是块级元素的后台。<br>(6)根元素：位于文档树顶端的元素。在HTML中，就是元素HTML。</p>
-<h5 id="2-块级元素"><a href="#2-块级元素" class="headerlink" title="2.块级元素"></a>2.块级元素</h5><ol>
-<li>水平格式化<br>水平格式化的“7大属性”是：margin-left,border-left,padding-left,width,padding-right,border-right,margin-left<br>这七个水平属性的总和要等于父元素的width。<br>这里面只有width,margin-left,margin-right这三个可以设置为：auto，其他都必须设为特定的值或者默认宽度为0.</li>
-</ol>
-<ul>
-<li>如果设置width,margin-left,margin-right中的某个值为auto，而余下两个属性为特定值，则设置为auto的属性由系统计算其值。</li>
-<li>如果设置margin-left,margin-right都为auto，它们会被设置为相等的长度，因此将元素在其父元素中居中。</li>
-<li>如果设置width和某个外边距为auto，设置为auto的外边距会减为0，width会设置为所需的值，使元素完全填充其包含块。</li>
-<li>如果这3个属性全是auto，则两个外边距会被设置为0，width会尽可能宽。</li>
-<li>外边距可以为负值。</li>
-<li>当水平属性过分受限时，系统会重置右外边距，使满足要求。<br>width,margin-left,margin-right还可以设置为百分数。<br>对于替换元素，非替换块元素的规则同样适用于替换块元素。只有一个例外，如果width为auto，元素的宽度则是内容的固有宽度。</li>
-</ul>
-<ol start="2">
-<li>垂直格式化<br>对应于水平格式化，它也有7个属性：<br>margin-top,border-top,padding-top,height,padding-bottom,border-bottom,margin-bottom.<br>同样这七个值必须等于包含元素块的高。<br>这七个值中只有三个值可以设为auto:height,margin-top,margin-bottom,其他四个必须设为特定的值或默认为0。</li>
-</ol>
-<ul>
-<li>如果正常流中的一个块元素的margin-top或者margin-bottom设置为auto，它会自动计算为0。</li>
-<li>垂直格式化的另一个重要的是合并垂直外边距（重叠垂直外边距）。</li>
-<li>上、下外边距为负时，有一种“拉近”的感觉。</li>
-</ul>
-<h5 id="3-行内元素"><a href="#3-行内元素" class="headerlink" title="3.行内元素"></a>3.行内元素</h5><ol>
-<li>基本术语和概念<br><strong>匿名文本</strong>，是指所有未包含在行内元素中的字符串。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;I&apos;m&lt;em&gt;so&lt;/em&gt;happy!&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>序列中I’m和happy!都是匿名文本。<br><strong>em框</strong>，em框在字体中定义，也成为字符框。实际的字形可能比其em框更高或更矮。font-size值确定了各个em框的高度。<br><strong>内容区</strong>，在非替换元素中，内容区可能有两种。内容区可以是元素中个字符的em框串在一起构成的框，也可以是由元素中字符字形描述的框。<br><strong>行间距</strong>，是font-size值和line-height值只差，这个差实际上要分为两半，分别应用到内容区的顶部和底部。为内容区增加的这两部分分别称为版兼具。行内距只应用于非替换元素。<br><strong>行内框</strong>，这个框通过向内容区增加行间距来描述。对于非替换元素，袁术行内框的高度刚好等于line-height的值。对于替换元素，元素行内框的高度则恰好等于内容区的高度，因为行间距不应用到替换元素。<br><strong>行框</strong>，这个包含该行中出现的行内框的最高点和最低点的最小框。换句话说，行框的上边界要位于最高行内框的上边界，而行框的底边要放在最低行内框的下边界。</p>
-<ul>
-<li>内容区类似于一个块级元素的内容框。</li>
-<li>行内元素的背景应用于内容区及所有内边距。</li>
-<li>行内元素的边框要包围内容区及所有内边距和边框。非替换元素的内边距、边框和外边距对行内元素或其生成的框没有垂直效果；也就是所它们不会影响元素行内框的高度。</li>
-<li>替换元素的外边距和边框确实会影响该元素行内框的高度，相应地，也可能影响包含该元素的边框高度。</li>
-</ul>
-<ol start="2">
-<li>行内非替换元素<br>注意：</li>
-</ol>
-<ul>
-<li>line-height是一个继承属性。</li>
-<li>文本都是按基线对齐的。</li>
-<li>内边距和边框不影响行框的生成，也不会改变行高。</li>
-<li>外边距不会应用到行内非替换元素的顶端和底端，不会影响行框的高度。<br>设置line-height最好办法是使用一个原始数字，这个数字会成为缩放因子，该因子是一个继承值而非计算值。如果你希望一个文档中所有元素的line-height都是其font-size的1.5倍，可以如下声明：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body &#123;line-height: 1.5;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<p>上面这条规则为类名为 aside 的段落定义了四种边框样式：实线上边框、点线右边框、虚线下边框和一个双线左边框。<br>也可以用border-top-style，border-right-style，border-bottom-style，borderleft-style来定义边框样式。<br>border-style：none；边框将不存在。<br>border-width定义边框的宽度，border-color定义边框颜色。</p>
 <ol start="3">
-<li>行内替换元素<br>一般认为行内替换元素（如图像）有固定的高度和宽度。有固定高度的替换元素可能会导致行框比正常要高，这不会改变行中任何元素的line-height值，只是让行框的高度恰好包含替换元素（以及所有的框属性）。<br>替换元素的内边距和边框确实会影响行框的高度。设置正外边距会使行内元素行框变高，负的外边距会使行框减小。<br>实际上，替换元素的下外边距边界与基线对齐，为了解决这个问题，通常有两个办法：</li>
+<li>外边距<br>设置外边距的最简单的方法就是使用 margin 属性。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;margin : 10px 0px 15px 5px;&#125; // 分别设置上、右、下、左外边距的值</span><br><span class="line">h1 &#123;margin: 0.25em 1em 0.5em;&#125;	/* 等价于 0.25em 1em 0.5em 1em */</span><br><span class="line">h2 &#123;margin: 0.5em 1em;&#125;		/* 等价于 0.5em 1em 0.5em 1em */</span><br><span class="line">p &#123;margin: 1px;&#125;			/* 等价于 1px 1px 1px 1px */</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>也可以使用margin-top,margin-right,margin-bottom,margin-right来定义外边距。</p>
+<ol start="4">
+<li>外边距合并<br>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。<br>合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</li>
 </ol>
 <ul>
-<li>使图像成为块级元素，这样就不会生成行框；</li>
-<li>使用一个负的下外边距，元素会被向下拉。</li>
+<li>当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并。</li>
+<li>当一个元素包含在另一个元素中时（假设没有内边距或边框把外边距分隔开），它们的上和/或下外边距也会发生合并。</li>
+<li>假设有一个空元素，它有外边距，但是没有边框或填充，在这种情况下，上外边距与下外边距就碰到了一起，它们会发生合并。<br>注意：只有普通文档流中块框的垂直外边距才会发生外边距合并。行内框、浮动框或绝对定位之间的外边距不会合并。</li>
 </ul>
-<p>参考网页：<a href="https://www.w3cschool.cn/css/" target="_blank" rel="noopener">W3Cschool CSS教程</a><br>参考书籍：《CSS权威指南》，作者：Eric A.Meyer</p>
+<h3 id="2-CSS定位"><a href="#2-CSS定位" class="headerlink" title="2.CSS定位"></a>2.CSS定位</h3><p>CSS 有三种基本的定位机制：普通流、浮动和绝对定位。</p>
+<ol>
+<li>相对定位<br>如果对一个元素进行相对定位，可以通过设置垂直或水平位置，让这个元素“相对于”它本来要出现的位置的进行移动，原来的位置还存在。</li>
+<li>绝对定位<br>设置为绝对定位的元素框从文档流完全删除，并相对于其包含块定位，包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像该元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。</li>
+<li>浮动<br>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。<br>由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。</li>
+<li>浮动元素内幕<br>首先需要建立包含块的概念。浮动元素的包含块是其最近的块级祖先元素。一个元素无论之前是行内元素还是块级元素，在浮动了之后都是成为一个块级框，它会像块级元素一样摆放和表现。<br>浮动元素的左（或右）外边界不能超出其包含块的左（或右）padding边界，浮动元素的上（或下）外边界不能超出其包含块的左（或右）padding边界。这一点和absolute元素不一样，absolute元素是不能超出其父元素的border边界。（比如说不能超出其包含块的左padding边界，意思是浮动元素不能进入padding范围内，就是不包括padding）<br>浮动元素的左（或右）外边界必须是源文档中之前出现的左浮动（或右浮动）元素的右（左）外边界，除非后出现的浮动元素的顶端在先出现浮动元素的底端下面。</li>
+</ol>
+<h3 id="3-选择器的解析方向"><a href="#3-选择器的解析方向" class="headerlink" title="3.选择器的解析方向"></a>3.选择器的解析方向</h3><p>从右到左，先拿到目标节点的描述，匹配到可能的节点后，再查找父节点。而从左到右解析，先匹配上层元素，再一层层向下匹配，当匹配不到，需要回溯上一层重新匹配。众所周知，在DOM树中一个元素可能有若干子元素，如果每一个都去判断一下显然性能太差。而一个子元素只有一个父元素，所以找起来非常方便。<br>所以我们的CSS解析器是从右向左匹配节点的。这样做是为了减少无效匹配次数，从而匹配快、性能更优。</p>
+<h3 id="4-盒模型"><a href="#4-盒模型" class="headerlink" title="4.盒模型"></a>4.盒模型</h3><p>W3C标准盒模型和IE盒模型<br>水平方向盒模型是由margin-left、border-left、padding-left、content、padding-right、border-right、margin-right组成。<br>W3C标准盒模型的宽度和高度分别是content的width和height<br>IE标准盒模型的宽度和高度分别是content+padding+border的width和height<br>使用box-sizing来切换盒模型。Box-sizing:border-box就是IE盒模型，box-sizing:content-box就是W3C盒模型。<br>使用box-sizing: border-box，在设置有padding值和border值的时候将不会把宽度撑开。<br>也可以回避这个问题，也就是，不要给元素添加具有指定宽度的内边距，而是尝试将内边距或外边距添加到元素的父元素和子元素。</p>
+<h3 id="5-包含块"><a href="#5-包含块" class="headerlink" title="5.包含块"></a>5.包含块</h3><p>之前在浮动元素中就已经说了包含块的概念。<br>对于一个非根元素，如果其position值是relative或static，包含块则是由最近的块级框、表单元格或行内祖先框的内容边界构成。<br>对于一个非根元素，如果其position值是absolute，包含块是最近的position不是static的祖先元素。</p>
+<p>如果这个祖先元素是块级元素，包含块则设置为该元素的内边距边界。<br>如果这个祖先元素是行内元素，包含块则设置为该祖先元素的内容边界。<br>一个框里横向排列三个块，怎样让这三个块的宽度均为包含块的1/3，尽量说出两种方法<br>使用flex<br>使用float，让三个元素都float<br>使用display: inline-block，并用font-size去除行内块元素的间隔</p>
+<h3 id="6-补充"><a href="#6-补充" class="headerlink" title="6.补充"></a>6.补充</h3><ol>
+<li><p>去除行内块元素的间隙<br>在父元素上设置font-size为0。<br>在父元素上设置letter-spacing和word-spacing为-6左右。<br>取消标签闭合。<br>移除标签间的空格。</p>
+</li>
+<li><p>box-shadow<br>box-shadow: h-shadow v-shadow blur spread color inset;<br>其中h-shadow（水平阴影位置）， v-shadow（垂直阴影位置）必需，可以为负值。<br>blur是模糊距离，spread是阴影尺寸。</p>
+</li>
+<li><p>块级元素和行内元素<br>块级元素：div\p\form\table\header\footer\section\h1-6<br>行内元素：span\i\a\input\button\label\select</p>
+</li>
+</ol>
+<ul>
+<li>块级元素独自占一行且宽度会占满父元素宽度，行内元素不会独占一行</li>
+<li>块级元素可以设置weith和height，行内元素设置width和height无效</li>
+<li>块级元素可以设置margin和padding属性，行内元素水平方向的margin和padding如margin-left、padding-right可以产生边距效果，但是竖直方向的如padding-top和margin-bottom不会产生边距效果</li>
+<li>display：inline-block；可以让元素具有块级元素和行内元素的特性：既可以设置长宽，可以让padding和margin生效，又可以和其他行内元素并排。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>行内元素尽量只包含行内元素</li>
+<li>p标签和h1标签文字类块级元素，里面不能放块级元素</li>
+<li>a标签不能嵌套，但a里可以放块级元素    </li>
+</ul>
+<p>参考网页：<a href="https://www.w3cschool.cn/css/css_syntax.asp" target="_blank" rel="noopener">W3Cschool CSS教程</a><br>参考书籍：《CSS权威指南》，作者：Eric A.Meyer</p>
 
           
         
@@ -471,7 +434,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -521,7 +484,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
