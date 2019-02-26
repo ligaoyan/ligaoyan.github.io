@@ -250,7 +250,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2018/12/08/JS中的BOM/">
+    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2018/12/31/CSS基础一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ligaoyan">
@@ -269,7 +269,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/08/JS中的BOM/" itemprop="url">JS中的BOM</a></h1>
+                <a class="post-title-link" href="/2018/12/31/CSS基础一/" itemprop="url">CSS基础一</a></h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-08T20:17:46+08:00">
-                2018-12-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-31T16:15:53+08:00">
+                2018-12-31
               </time>
             
 
@@ -304,8 +304,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS/" itemprop="url" rel="index">
-                    <span itemprop="name">JS</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -343,216 +343,154 @@
       
         
           
-            <h3 id="1-BOM"><a href="#1-BOM" class="headerlink" title="1. BOM"></a>1. BOM</h3><p>BOM(Browers Object Model)是浏览器对象模型，通过JS操作BOM来控制浏览器的各种行为。<br>BOM对象如下图所示。<br><img src="/2018/12/08/JS中的BOM/BOM对象.jpg" alt=""><br>Window对象的子对象：</p>
-<ul>
-<li>document子对象，DOM的对象，文档对象模型</li>
-<li>frames子对象，浏览器框架集合对象</li>
-<li>history子对象，浏览器历史信息对象</li>
-<li>location子对象，浏览器位置信息对象</li>
-<li>navigator子对象，浏览器导航对象，存放浏览器的信息</li>
-<li>screen子对象，浏览器屏幕对象</li>
-</ul>
-<h3 id="2-Window对象"><a href="#2-Window对象" class="headerlink" title="2. Window对象"></a>2. Window对象</h3><p>所有浏览器都支持 window 对象。它表示浏览器窗口。<br>所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。全局变量是 window 对象的属性。全局函数是 window 对象的方法。HTML DOM 的 document 也是 window 对象的属性之一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.document.getElementById(&quot;btn&quot;);</span><br><span class="line">// 等价于</span><br><span class="line">document.getElementById(&quot;btn&quot;);</span><br></pre></td></tr></table></figure></p>
-<p>确定浏览器窗口尺寸的兼容代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 窗口的宽</span><br><span class="line">var w=window.innerWidth                </span><br><span class="line">|| document.documentElement.clientWidth</span><br><span class="line">|| document.body.clientWidth;</span><br><span class="line"></span><br><span class="line">// 窗口的高</span><br><span class="line">var h=window.innerHeight</span><br><span class="line">|| document.documentElement.clientHeight</span><br><span class="line">|| document.body.clientHeight;</span><br></pre></td></tr></table></figure></p>
-<p>其它Window方法：</p>
-<ul>
-<li>window.open() – 打开新窗口</li>
-<li>window.close() – 关闭当前窗口</li>
-<li>window.moveTo() – 移动当前窗口</li>
-<li>window.resizeTo() – 调整当前窗口的尺寸</li>
-</ul>
-<h3 id="3-frames对象"><a href="#3-frames对象" class="headerlink" title="3. frames对象"></a>3. frames对象</h3><p>如果页面中包含框架，则每个框架都拥有自己的window对象，并且保存在frames集合中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">	    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;frameset rows=&quot;160,*&quot;&gt;</span><br><span class="line">        &lt;frame src=&quot;frame.htm&quot; name=&quot;topFrame&quot;&gt;</span><br><span class="line">        &lt;frameset&gt;</span><br><span class="line">            &lt;frame src=&quot;anotherframe.htm&quot; name=&quot;leftFrame&quot;&gt;</span><br><span class="line">            &lt;frame src=&quot;yetanotherframe.htm&quot; name=&quot;rightFrame&quot;&gt;</span><br><span class="line">        &lt;/frameset&gt;		</span><br><span class="line">    &lt;/frameset&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<p>以上代码创建了一个框架集，其中一个框架居上，两个框架局下。对于这个例子，可以通过window.frames[0]或者window.frames[“topFrame”]来引用上方的框架。不过最好使用top而非window，因为top对象始终指向最高最外层的框架。<br>在使用框架的情况下，浏览器会存在多个Global对象。每个window对象都包含原生类型的构造函数，因此每个框架都有一套自己的构造函数，这些构造函数一一对应，但并不相等。</p>
-<h3 id="4-location对象"><a href="#4-location对象" class="headerlink" title="4. location对象"></a>4. location对象</h3><p>location是最有用的BOM对象之一，因为它提供了与当前窗口中加载的文档有关的信息，还提供一些导航功能。其实，location对象既是window对象的属性也是document对象的属性，即window.location和document.location引用的是同一个对象。<br>location对象还可以将URL解析为独立的片段，让开发人员可以通过不同的属性访问这些片段，下表列出了location对象的所有属性（省略了属性前面的location前缀）。</p>
+            <h3 id="1-CSS选择器"><a href="#1-CSS选择器" class="headerlink" title="1.CSS选择器"></a>1.CSS选择器</h3><h5 id="1-元素选择器"><a href="#1-元素选择器" class="headerlink" title="1. 元素选择器"></a>1. 元素选择器</h5><p>文档的元素就是最基本的选择器。选择器通常是某个HTML元素，比如 p、h1、em、a，包括html本身。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html &#123;color: black;&#125;</span><br><span class="line">h1 &#123;color: blue;&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="2-类选择器"><a href="#2-类选择器" class="headerlink" title="2. 类选择器"></a>2. 类选择器</h5><p>类名前有一个点号（.）来选择同一类的元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 class=&quot;news&quot;&gt;</span><br><span class="line">This is the title.</span><br><span class="line">&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&lt;p class=&quot;news cont&quot;&gt;</span><br><span class="line">This is the content.</span><br><span class="line">&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">.news &#123;color: red;&#125;</span><br><span class="line">p.news &#123;font-size: 16px;&#125;</span><br><span class="line">.news.cont &#123;background: silver;&#125; // 多类选择器</span><br></pre></td></tr></table></figure></p>
+<h5 id="3-ID选择器"><a href="#3-ID选择器" class="headerlink" title="3. ID选择器"></a>3. ID选择器</h5><p>ID 选择器前面有一个(#)号，而且引用的是 id 属性中的值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=&quot;info&quot;&gt;This is the content.&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">#info &#123;font-size:bold;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>ID选择器与类选择器的区别：<br>(1) 在一个HTML文档中，ID选择器会使用一次，而且仅一次。<br>(2) ID选择器不能结合使用，因为ID属性不允许有以空格分隔的词列表。<br>(3) 不同的文档中具有的相同的ID属性，可以同时为其设置属性。</p>
+<h5 id="4-属性选择器"><a href="#4-属性选择器" class="headerlink" title="4. 属性选择器"></a>4. 属性选择器</h5><p>属性选择器可以根据元素的属性及属性值来选择元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a[href] &#123;color:red;&#125; // 选择a元素中有href属性的</span><br><span class="line">a[href][title] &#123;color:red;&#125; // 多属性选择</span><br><span class="line"></span><br><span class="line">a[href=&quot;http://www.w3school.com.cn&quot;] &#123;color: red;&#125; //根据具体的属性值来选择</span><br></pre></td></tr></table></figure></p>
+<h5 id="5-后代选择器"><a href="#5-后代选择器" class="headerlink" title="5. 后代选择器"></a>5. 后代选择器</h5><p>如果希望h1元素的所有后代中的em元素应用样式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1 em &#123;color:red;&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="6-子代选择器"><a href="#6-子代选择器" class="headerlink" title="6. 子代选择器"></a>6. 子代选择器</h5><p>如果希望h1元素的子代中的em元素应用样式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1&gt;em &#123;color:red;&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="7-相邻兄弟选择器"><a href="#7-相邻兄弟选择器" class="headerlink" title="7. 相邻兄弟选择器"></a>7. 相邻兄弟选择器</h5><p>如果选择紧接在h1元素后的em元素，两者为兄弟关系，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1 + em &#123;color:red;&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="8-选择器分组"><a href="#8-选择器分组" class="headerlink" title="8. 选择器分组"></a>8. 选择器分组</h5><p>不同选择器之间用(,)分隔。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body, h2, p &#123;color:gray;&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="9-伪类选择器"><a href="#9-伪类选择器" class="headerlink" title="9. 伪类选择器"></a>9. 伪类选择器</h5><p>伪类选择器可以为某些元素（甚至是文档本身）的状态所指示的幻想类指定样式。</p>
+<ol>
+<li>链接伪类</li>
+</ol>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">属性名</th>
-<th style="text-align:center">片段</th>
-<th style="text-align:center">说明</th>
+<th style="text-align:center">伪类名</th>
+<th style="text-align:center">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">hash</td>
-<td style="text-align:center">“#contents”</td>
-<td style="text-align:center">返回URL中的hash,若URL中不包含散列，则返回空字符串</td>
+<td style="text-align:center">:link</td>
+<td style="text-align:center">指示作为超链接（即有一个href属性）并指向一个未访问地址的所有锚</td>
 </tr>
 <tr>
-<td style="text-align:center">host</td>
-<td style="text-align:center">“<a href="http://www.wrox.com:80&quot;" target="_blank" rel="noopener">www.wrox.com:80&quot;</a></td>
-<td style="text-align:center">返回服务器名称和端口号，如果有</td>
-</tr>
-<tr>
-<td style="text-align:center">hostname</td>
-<td style="text-align:center">“<a href="http://www.wrox.com&quot;" target="_blank" rel="noopener">www.wrox.com&quot;</a></td>
-<td style="text-align:center">返回不带端口号的服务器名称</td>
-</tr>
-<tr>
-<td style="text-align:center">href</td>
-<td style="text-align:center">“http:/<a href="http://www.wrox.com&quot;" target="_blank" rel="noopener">www.wrox.com&quot;</a></td>
-<td style="text-align:center">返回当前页面的完整URL</td>
-</tr>
-<tr>
-<td style="text-align:center">pathname</td>
-<td style="text-align:center">“/wileyCDA/“</td>
-<td style="text-align:center">返回URL中的目录和文件名</td>
-</tr>
-<tr>
-<td style="text-align:center">port</td>
-<td style="text-align:center">“8080”</td>
-<td style="text-align:center">返回URL中指定的端口号，如没有，返回空</td>
-</tr>
-<tr>
-<td style="text-align:center">protocol</td>
-<td style="text-align:center">“http:”</td>
-<td style="text-align:center">返回页面中使用的协议</td>
-</tr>
-<tr>
-<td style="text-align:center">search</td>
-<td style="text-align:center">“?q=javascript”</td>
-<td style="text-align:center">返回URL中的查询字符串</td>
+<td style="text-align:center">:visited</td>
+<td style="text-align:center">指示作为已访问地址超链接的所有锚</td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li><p>查询字符串参数<br>上面location.search返回从问号到URL末尾的所有内容，但却没有办法访问其中的每个查询字符串参数。<br>为此需要创建一个函数，用以解析查询字符串。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function getQueryStringArgs()&#123;</span><br><span class="line">	//取得查询字符串并去掉前面的?号</span><br><span class="line">	var qs = (location.search.length &gt; 0 ? location.search.substring(1) : &quot;&quot;),</span><br><span class="line">    args = &#123;&#125;,</span><br><span class="line">    items = qs.length ? qs.split(&quot;&amp;&quot;) : [],</span><br><span class="line">    item = null,</span><br><span class="line">    name = null,</span><br><span class="line">    value = null,</span><br><span class="line"></span><br><span class="line">    i = 0,</span><br><span class="line">    len = items.length;</span><br><span class="line">    // 逐个将每一项添加到args对象中</span><br><span class="line">    for (i=0; i&lt;len; i++)&#123;</span><br><span class="line">    	item = items[i].split(&quot;=&quot;);</span><br><span class="line">    	name = decodeURIComponent(item[0]);</span><br><span class="line">    	value = decodeURIComponent(item[1]);</span><br><span class="line"></span><br><span class="line">    	if (name.length)&#123;</span><br><span class="line">    		args[name] = value;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return args;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//假设查询字符串是?q=javascript&amp;num=10</span><br><span class="line">var args = getQueryStringArgs();</span><br><span class="line">alert(args[&quot;q&quot;]); // &quot;javascript&quot;</span><br><span class="line">alert(args[&quot;num&quot;]); // &quot;10&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>位置操作<br>location对象可以通过很多方式来改变浏览器的位置。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location.assign(&quot;http://www.wrox.com&quot;);</span><br><span class="line">window.location = &quot;http://www.wrox.com&quot;;</span><br><span class="line">location.href = &quot;http://www.wrox.com&quot;; // 常用</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>动态伪类</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">伪类名</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">:focus</td>
+<td style="text-align:center">指示当前拥有输入焦点的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">:hover</td>
+<td style="text-align:center">指示鼠标停留在哪个元素上</td>
+</tr>
+<tr>
+<td style="text-align:center">:active</td>
+<td style="text-align:center">指示被用户输入激活的元素</td>
+</tr>
+</tbody>
+</table>
+<p>动态伪类可以应用到任何元素上。<br>伪类的顺序很重要，通常是“link-visited-focus-hover-active”。</p>
+<ol start="3">
+<li>选择第一个子元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p:first-child &#123;font-weight: bold;&#125;</span><br><span class="line">li:first-child &#123;background: yellow;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>另外，修改location对象的其它属性也可以改变当前加载的页面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 假设初始URL为http://www.wrox.com/WileyCDA/</span><br><span class="line"></span><br><span class="line">location.hash = &quot;#section1&quot;; // http://www.wrox.com/WileyCDA/#section1</span><br><span class="line"></span><br><span class="line">location.search = &quot;?q=javascript&quot;; // http://www.wrox.com/WileyCDA/?q=javascript</span><br><span class="line"></span><br><span class="line">location.hostname = &quot;www.yaho.com&quot;; // http://www.yaho.com/WileyCDA/</span><br><span class="line"></span><br><span class="line">location.pathname = &quot;mydir&quot;; // http://www.wrox.com/mydir/</span><br><span class="line"></span><br><span class="line">location.port = 8080; // http://www.wrox.com:8080/WileyCDA/</span><br></pre></td></tr></table></figure></p>
-<p>当通过上述任何一种方式改变URL以后，浏览器的历史记录就会生成一条新记录，因此用户通过单击后退按钮都会导航到前一个页面。</p>
-<h3 id="5-navigator对象"><a href="#5-navigator对象" class="headerlink" title="5. navigator对象"></a>5. navigator对象</h3><p>window.navigatornavigator 对象已成为识别客户端浏览器的事实标准。但每一种浏览器的 navigator 对象都有自己的属性，下表列出了部分属性：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">属性或方法</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">IE</th>
-<th style="text-align:center">Firefox</th>
-<th style="text-align:center">Safari/Chrome</th>
-<th style="text-align:center">Opera</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">appCodeName</td>
-<td style="text-align:center">浏览器名称,通常是Mozilla</td>
-<td style="text-align:center">3.0+</td>
-<td style="text-align:center">1.0+</td>
-<td style="text-align:center">1.0+</td>
-<td style="text-align:center">7.0+</td>
-</tr>
-<tr>
-<td style="text-align:center">appMinorVersion</td>
-<td style="text-align:center">次版本信息</td>
-<td style="text-align:center">4.0+</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">9.5+</td>
-</tr>
-<tr>
-<td style="text-align:center">appName</td>
-<td style="text-align:center">浏览器的完整名称</td>
-<td style="text-align:center">3.0+</td>
-<td style="text-align:center">1.0+</td>
-<td style="text-align:center">1.0+</td>
-<td style="text-align:center">7.0+</td>
-</tr>
-<tr>
-<td style="text-align:center">appVersion</td>
-<td style="text-align:center">浏览器版本，不与实际版本对应</td>
-<td style="text-align:center">3.0+</td>
-<td style="text-align:center">1.0+</td>
-<td style="text-align:center">1.0+</td>
-<td style="text-align:center">7.0+</td>
-</tr>
-<tr>
-<td style="text-align:center">buildID</td>
-<td style="text-align:center">浏览器的编译版本</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">2.0+</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">cookieEnabled</td>
-<td style="text-align:center">cookie 是否启用</td>
-<td style="text-align:center">4.0+</td>
-<td style="text-align:center">1.0+</td>
-<td style="text-align:center">1.0+</td>
-<td style="text-align:center">7.0+</td>
-</tr>
-<tr>
-<td style="text-align:center">cpuClass</td>
-<td style="text-align:center">客户端的计算机使用的CPU类型</td>
-<td style="text-align:center">4.0+</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-</tbody>
-</table>
+<p>将作为某一个元素第一个子元素的所有p元素（li元素）设置为粗体。<br>这里不要理解错了，应该注意。</p>
+<h5 id="10-伪元素选择器"><a href="#10-伪元素选择器" class="headerlink" title="10. 伪元素选择器"></a>10. 伪元素选择器</h5><p>伪元素能够在文档中插入假想的元素，从而得到某种效果。</p>
 <ol>
-<li><p>检测插件<br>跨浏览器检测插件的方法是针对每个插件分别创建函数，比如下面两个：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//检测所有浏览器中的 Flash 插件</span><br><span class="line">function hasFlash() &#123;</span><br><span class="line">    var result = hasPlugin(&quot;Flash&quot;);</span><br><span class="line">    if (!result) &#123;</span><br><span class="line">        result = hasIEPlugin(&quot;ShockwaveFlash.ShockwaveFlash&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//检测所有浏览器中的 QuickTime 插件</span><br><span class="line">function hasQuickTime() &#123;</span><br><span class="line">    var result = hasPlugin(&quot;QuickTime&quot;);</span><br><span class="line">    if (!result) &#123;</span><br><span class="line">        result = hasIEPlugin(&quot;QuickTime.QuickTime&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">alert(hasFalsh());</span><br><span class="line"></span><br><span class="line">alert(hasQuickTime());</span><br></pre></td></tr></table></figure>
+<li><p>设置首字母样式<br>用于设置一个块级元素首字母的样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p:first-letter &#123;color: red;&#125; //</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>注册处理程序<br>Firefox2为navigator对象新增了registerContentHandler()和registerProtocolHandler()方法，这两个方法可以让一个站点指明它可以处理特定类型的信息。随着RSS阅读器和在线电子邮件程序的兴起，注册处理程序就为像使用桌面应用程序一样默认使用这些在线应用程序提供了一种方式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">navigator.registerContentHandler(&quot;application/rss+xml&quot;,&quot;http://www.somereader.com?feed=%s&quot;,&quot;Some Reader&quot;);</span><br></pre></td></tr></table></figure>
+<li><p>设置第一行的样式<br>用来设置元素中第一行的文本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p:first-line &#123;color: red;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置之前和之后元素的样式<br>假设要在每个h2元素前加一对银色中括号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h2:before &#123;content: &quot;]]&quot;; color: silver;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>第一个参数是要处理的MIME类型，第二个参数是处理该MIME类型的页面的URL，第三个参数是应用程序的名称。<br>同样的，registerProtocolHandler()方法也接收3个参数，以下例子注册了一个mailto协议的处理程序。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">navigator.registerProtocolHandler(&quot;mailto&quot;,&quot;http://www.somemailclient.com?feed=%s&quot;,&quot;Some Mail Client&quot;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="6-screen对象"><a href="#6-screen对象" class="headerlink" title="6. screen对象"></a>6. screen对象</h3><p>window.screen 对象包含有关用户屏幕的信息，下表列出了部分screen的属性。</p>
+<p>要在一个元素后面插入内容并设置样式，可以使用伪元素:after。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body:after &#123;content: &quot; The End.&quot;&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-结构和层叠"><a href="#2-结构和层叠" class="headerlink" title="2.结构和层叠"></a>2.结构和层叠</h3><h5 id="1-选择器的特殊性"><a href="#1-选择器的特殊性" class="headerlink" title="1. 选择器的特殊性"></a>1. 选择器的特殊性</h5><p>如果一个元素有两个或多个冲突的属性声明，那么有最高特殊性的声明就会胜出。声明也分为重要声明（就是!important）和非重要声明。这两类声明解决冲突的规则入下：<br>(1) 对于重要声明就没有特殊性一说,非重要声明的解决冲突使用特殊性,重要声明与非重要声明发生冲突时，胜出的总是重要声明<br>(2) 非重要声明的特殊性由选择器本身确定。特殊性值表述为4个部分，如0，0，0，0.</p>
+<ul>
+<li>对于内联样式特殊性加1，0，0，0；</li>
+<li>对于ID选择器特殊性加0，1，0，0；</li>
+<li>对于类选择器、伪类选择器、属性选择器特殊性加0，0，1，0；</li>
+<li>对于元素选择器和伪元素选择器特殊性加0，0，0，1；</li>
+<li>对于通配选择器的特殊性加0，0，0，0；（这个和没有特殊性不一样）</li>
+</ul>
+<p>(3) 对于子元素从父元素继承来的值是没有特殊性的，因此通配选择器会覆盖继承来的值。<br>(4) 如果特殊性相同的两个规则同时应用到同一个元素，则按照声明的顺序进行排序，一个声明在文档中越后出现，权重越大。导入样式表的出现顺序一般认为出现在主样式表的前面。<br>(5) 以及按角色分为创作人员样式、读者样式和用户代理样式。其中用户代理样式的优先级最低。一般而言创作人员样式优先级最高，除了读者样式设置为!important的情况，这种情况就算是创作人员样式设置为!important都是比他弱的。</p>
+<h5 id="2-继承"><a href="#2-继承" class="headerlink" title="2. 继承"></a>2. 继承</h5><ul>
+<li>css不可继承的属性有：大多数框模型属性（外边距、内边距、背景和边框）。</li>
+<li>css可继承的属性有：颜色，文字，字体间距行高对齐方式，和列表的样式可以继承</li>
+<li>所有元素可继承：visibility和cursor。</li>
+<li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、font-family、font-size、font-style、font-variant、font-weight、text-decoration、text-transform、direction。</li>
+<li>终端块状元素可继承：text-indent和text-align。</li>
+<li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li>
+</ul>
+<p>继承的值没有特殊性。通配选择器有0特殊性。0特殊性要比无特殊性要强。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;color: gray;&#125;</span><br><span class="line">h1.page-title &#123;color: black;&#125;</span><br><span class="line"></span><br><span class="line">&lt;h1 class=&quot;page-title&quot;&gt;&lt;p&gt;hello world&lt;/p&gt;&lt;/h1&gt;</span><br></pre></td></tr></table></figure></p>
+<p>p元素里的内容显示为灰色。</p>
+<h5 id="3-层叠"><a href="#3-层叠" class="headerlink" title="3. 层叠"></a>3. 层叠</h5><p>(1) 找出所有相关的规则，这些规则都包含与一个给定元素匹配的选择器。<br>(2) 按显式权重对应用到该元素的所有声明进行排序，有!important标志的声明的权重要高于不带!important标志的声明。<br>(3) 按来源对应用到给定元素的所有声明进行排序。正常情况下，创作人员的样式要胜过读者的样式。有!important标志的的读者样式要强于所有其他样式，包括有!important标志的创作人员样式。创作人员的样式和读者样式斗都比用户代理的默认样式强。<br>(4) 按特殊性对应用到给定元素的所有声明进行排序，有较高特殊性的元素权重要大于有较低特殊性的元素。<br>(5) 按出现顺序对应用到给定元素的所有声明进行排序，后面出现的声明权重要大于前面出现的声明，即后定义的样式会覆盖前面定义的样式。</p>
+<h3 id="3-值和单位"><a href="#3-值和单位" class="headerlink" title="3.值和单位"></a>3.值和单位</h3><h5 id="1-颜色"><a href="#1-颜色" class="headerlink" title="1. 颜色"></a>1. 颜色</h5><p>CSS中颜色表示方法有命名颜色、用RGB指定颜色（百分数记法、整数三元组记法）和十六进制RGB颜色，如下表。</p>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>说明</th>
+<th style="text-align:center">颜色</th>
+<th style="text-align:center">百分数</th>
+<th style="text-align:center">数值</th>
+<th style="text-align:center">十六进制</th>
+<th style="text-align:center">简写十六进制</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>height</td>
-<td>屏幕的像素高度</td>
+<td style="text-align:center">red</td>
+<td style="text-align:center">rgb(100%,0%,0%)</td>
+<td style="text-align:center">rgb(255,0,0)</td>
+<td style="text-align:center">#FF0000</td>
+<td style="text-align:center">#F00</td>
 </tr>
 <tr>
-<td>width</td>
-<td>屏幕的像素宽度</td>
+<td style="text-align:center">orange</td>
+<td style="text-align:center">rgb(100%,40%,0%)</td>
+<td style="text-align:center">rgb(255,102,0)</td>
+<td style="text-align:center">#FF6600</td>
+<td style="text-align:center">#F60</td>
 </tr>
 <tr>
-<td>availHeight</td>
-<td>屏幕的像素高度减去系统部件高度之后的值(只读)</td>
+<td style="text-align:center">yellow</td>
+<td style="text-align:center">rgb(100%,100%,0%)</td>
+<td style="text-align:center">rgb(255,255,0)</td>
+<td style="text-align:center">#FFFF00</td>
+<td style="text-align:center">#FF0</td>
 </tr>
 <tr>
-<td>availWidth</td>
-<td>屏幕的像素宽度减去系统部件宽度之后的值(只读)</td>
+<td style="text-align:center">green</td>
+<td style="text-align:center">rgb(0%,50%,0%)</td>
+<td style="text-align:center">rgb(0,128,0)</td>
+<td style="text-align:center">#008000</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td>left</td>
-<td>当前屏幕距左边的像素距离[firefox返回0，chrome和IE不支持]</td>
-</tr>
-<tr>
-<td>top</td>
-<td>当前屏幕距上方的像素距离[firefox返回0，chrome和IE不支持]</td>
-</tr>
-<tr>
-<td>availLeft</td>
-<td>未被系统部件占用的最左侧的像素值(只读)[chrome和firefox返回0，IE不支持]</td>
-</tr>
-<tr>
-<td>availTop</td>
-<td>未被系统部件占用的最上方的像素值(只读)[chrome和firefox返回0，IE不支持]</td>
+<td style="text-align:center">blue</td>
+<td style="text-align:center">rgb(0%,0%,100%)</td>
+<td style="text-align:center">rgb(0,0,255)</td>
+<td style="text-align:center">#0000FF</td>
+<td style="text-align:center">#00F</td>
 </tr>
 </tbody>
 </table>
-<p>以下代码显示了部分用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    console.log(screen.availHeight); // 1040</span><br><span class="line">    console.log(screen.availWidth); // 1920</span><br><span class="line">    console.log(screen.width); // 1920</span><br><span class="line">    console.log(screen.height); // 1080</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="7-history对象"><a href="#7-history对象" class="headerlink" title="7. history对象"></a>7. history对象</h3><p>window.history 对象包含用户上网的历史记录。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">history.go(-1); // 后退一页</span><br><span class="line">history.go(1); // 前进一页</span><br><span class="line">history.go(2); // 前进两页</span><br><span class="line"></span><br><span class="line">history.back(); // 后退一页</span><br><span class="line">history.forward(); // 前进一页</span><br></pre></td></tr></table></figure></p>
-<p>history对象还有一个length属性，保存着历史记录数量，对于加载的第一个页面而言，history.length等于0；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (history.length == 0)&#123;</span><br><span class="line">	//这应该是用户打开窗口后的第一个页面</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>虽然history并不常用，但在创建自定义的“后退”和“前进”按钮，以及检测当前页面是不是用户历史记录中的第一个页面时，还是必须使用它。</p>
-<p>参考书籍：《JavaScript高级程序设计》，作者：【美】 Nicholas C.Zakas</p>
+<p>“Web安全”颜色是指，在256色计算机系统上总能避免抖动的颜色。Web安全颜色可以表示为RGB值20%和51（相应的十六进制为33）的倍数，0%和0安全值。比如rgb(40%,60%,100%),rgb(0,204,153)。十六进制使用00,33,66,99，CC，FF都认为是Web安全的。</p>
+<h5 id="2-绝对长度单位"><a href="#2-绝对长度单位" class="headerlink" title="2. 绝对长度单位"></a>2. 绝对长度单位</h5><p>绝对长度单位有英寸(in)，厘米(cm)，毫米(mm)，点(pt)，派卡(pc)。<br>其中点是标准印刷度量单位，1英寸是72点。派卡也是印刷术语，1派卡是12点。</p>
+<h5 id="3-相对长度单位"><a href="#3-相对长度单位" class="headerlink" title="3. 相对长度单位"></a>3. 相对长度单位</h5><p>相对长度单位有：em、ex、px<br>px像素(Pixel)。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。<br>em是相对长度单位。相对于当前对象内文本的字体尺寸。元素不同则em的值也不同。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。(引自CSS2.0手册)<br>ex是指字体中小写x的高度。如果两段文本，font-size相同但是所用字体不同，则ex的值也可能不同。</p>
+<p>参考网页：<a href="https://www.w3cschool.cn/css/" target="_blank" rel="noopener">W3Cschool CSS教程</a><br>参考书籍：《CSS权威指南》，作者：Eric A.Meyer</p>
 
           
         
@@ -592,7 +530,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -642,7 +580,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -653,7 +591,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -664,7 +602,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
