@@ -250,7 +250,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/02/01/CSS居中对齐/">
+    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/02/18/HTML5总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ligaoyan">
@@ -269,7 +269,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/01/CSS居中对齐/" itemprop="url">CSS居中对齐</a></h1>
+                <a class="post-title-link" href="/2019/02/18/HTML5总结/" itemprop="url">HTML5总结</a></h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-01T09:08:45+08:00">
-                2019-02-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T18:56:11+08:00">
+                2019-02-18
               </time>
             
 
@@ -304,8 +304,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
                   </a>
                 </span>
 
@@ -343,58 +343,152 @@
       
         
           
-            <h3 id="1-垂直居中对齐"><a href="#1-垂直居中对齐" class="headerlink" title="1.垂直居中对齐"></a>1.垂直居中对齐</h3><ol>
-<li>图片跟行内块中部对齐：图片和行内块都设置vertical-align:middle;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;div1&quot;&gt;</span><br><span class="line">	&lt;img src=&quot;./bird.png&quot; alt=&quot;&quot;&gt;</span><br><span class="line">	&lt;span&gt;行内块&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.div1&#123;</span><br><span class="line">		border: 1px solid red;</span><br><span class="line">		width: 400px;</span><br><span class="line">		height: 220px;</span><br><span class="line">	&#125;</span><br><span class="line">	img&#123;</span><br><span class="line">		border: 1px solid purpel;</span><br><span class="line">		vertical-align: middle; // 设置</span><br><span class="line">	&#125;</span><br><span class="line">	span&#123;</span><br><span class="line">		display: inline-block;</span><br><span class="line">		border: 1px solid gray;</span><br><span class="line">		vertical-align: middle; // 设置</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
+            <h3 id="1-HTML5-浏览器支持"><a href="#1-HTML5-浏览器支持" class="headerlink" title="1.HTML5 浏览器支持"></a>1.HTML5 浏览器支持</h3><p>最新版本的 Safari、Chrome、Firefox 以及 Opera 支持某些 HTML5 特性。Internet Explorer 9 将支持某些 HTML5 特性。<br>IE9 以下版本浏览器兼容HTML5的方法，使用本站的静态资源的html5shiv包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--[if lt IE 9]&gt;</span><br><span class="line">    &lt;script src=&quot;http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;![endif]--&gt;</span><br></pre></td></tr></table></figure></p>
+<p>载入后，初始化新标签的CSS：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/*html5*/</span><br><span class="line">article,aside,dialog,footer,header,section,nav,figure,menu&#123;display:block&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-HTML5-视频"><a href="#2-HTML5-视频" class="headerlink" title="2.HTML5 视频"></a>2.HTML5 视频</h3><p>HTML5 规定了一种通过 video 元素来包含视频的标准方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;movie.ogg&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">Your browser does not support the video tag.  // 供不支持video元素的浏览器显示</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure></p>
+<p>当前，video 元素支持三种视频格式，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">格式</th>
+<th style="text-align:center">IE</th>
+<th style="text-align:center">Firefox</th>
+<th style="text-align:center">Opera</th>
+<th style="text-align:center">Chrome</th>
+<th style="text-align:center">Safari</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Ogg</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">3.5+</td>
+<td style="text-align:center">10.5+</td>
+<td style="text-align:center">5.0+</td>
+<td style="text-align:center">/</td>
+</tr>
+<tr>
+<td style="text-align:center">MPEG4</td>
+<td style="text-align:center">9.0+</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">5.0+</td>
+<td style="text-align:center">3.0+</td>
+</tr>
+<tr>
+<td style="text-align:center">WebM</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">4.0+</td>
+<td style="text-align:center">10.6+</td>
+<td style="text-align:center">6.0+</td>
+<td style="text-align:center">/</td>
+</tr>
+</tbody>
+</table>
+<p>video元素允许多个source元素。source元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;video width=<span class="string">"320"</span> height=<span class="string">"240"</span> controls=<span class="string">"controls"</span>&gt;</span><br><span class="line">  &lt;source src=<span class="string">"movie.ogg"</span> type=<span class="string">"video/ogg"</span>&gt;</span><br><span class="line">  &lt;source src=<span class="string">"movie.mp4"</span> type=<span class="string">"video/mp4"</span>&gt;</span><br><span class="line">Your browser does not support the video tag.</span><br><span class="line">&lt;<span class="regexp">/video&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>video标签的属性:</p>
+<ul>
+<li>autoplay=”autoplay” 视频在就绪后马上播放。</li>
+<li>controls=”controls” 向用户显示控件，比如播放按钮。</li>
+<li>loop=”loop” 则循环播放。</li>
+<li>preload=”load” 当页面加载后载入整个视频,如果使用 “autoplay”，则忽略该属性。</li>
+</ul>
+<h3 id="3-HTML5-音频"><a href="#3-HTML5-音频" class="headerlink" title="3.HTML5 音频"></a>3.HTML5 音频</h3><p>HTML5 规定了一种通过 audio 元素来包含音频的标准方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio controls=&quot;controls&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;song.ogg&quot; type=&quot;audio/ogg&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;song.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</span><br><span class="line">Your browser does not support the audio tag. // 是供不支持audio元素的浏览器显示</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
+<p>当前，audio 元素支持三种音频格式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">\</th>
+<th style="text-align:center">IE9</th>
+<th style="text-align:center">Firefox3.5</th>
+<th style="text-align:center">Opera10.5</th>
+<th style="text-align:center">Chrome3.0</th>
+<th style="text-align:center">Safari3.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Ogg Vorbis</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">MP3</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">o</td>
+</tr>
+<tr>
+<td style="text-align:center">Wav</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">o</td>
+</tr>
+</tbody>
+</table>
+<p>audio标签的属性：</p>
+<ul>
+<li>autoplay=”autoplay” 视频在就绪后马上播放。</li>
+<li>controls=”controls” 向用户显示控件，比如播放按钮。</li>
+<li>loop=”loop” 则循环播放。</li>
+<li>preload=”load” 当页面加载后载入整个视频,如果使用 “autoplay”，则忽略该属性。</li>
+</ul>
+<h3 id="4-HTML5-拖放"><a href="#4-HTML5-拖放" class="headerlink" title="4.HTML5 拖放"></a>4.HTML5 拖放</h3><p>在 HTML5 中，拖放是标准的一部分，任何元素都能够拖放。拖放是一种常见的特性，即抓取对象以后拖到另一个位置。<br>浏览器支持：Internet Explorer 9、Firefox、Opera 12、Chrome 以及 Safari 5 支持拖放。（在 Safari 5.1.2 中不支持拖放。）</p>
+<h3 id="5-HTML5-画布"><a href="#5-HTML5-画布" class="headerlink" title="5.HTML5 画布"></a>5.HTML5 画布</h3><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。<br>向 HTML5 页面添加 canvas 元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure></p>
+<p>W3C上的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;  </span><br><span class="line">var c=document.getElementById(&quot;myCanvas&quot;);  // 使用id寻找canvas元素 </span><br><span class="line">var cxt=c.getContext(&quot;2d&quot;);  // 创建context对象</span><br><span class="line">cxt.fillStyle=&quot;#FF0000&quot;;  // 绘制对象为红色</span><br><span class="line">cxt.fillRect(0,0,150,75);  // 绘制一个矩形</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-HTML5-SVG"><a href="#6-HTML5-SVG" class="headerlink" title="6.HTML5 SVG"></a>6.HTML5 SVG</h3><p>SVG指可伸缩矢量图形,SVG用于定义用于网络的基于矢量的图形，SVG图像在放大或改变尺寸的情况下其图形质量不会有损失。<br>将 SVG 元素直接嵌入 HTML 页面中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; height=&quot;190&quot;&gt;</span><br><span class="line">  &lt;polygon points=&quot;100,10 40,180 190,60 10,60 160,180&quot;</span><br><span class="line">  style=&quot;fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;&quot; /&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结果将在页面上绘制一个五角星，详细看W3C教程。</p>
+<h3 id="7-HTML5-表单"><a href="#7-HTML5-表单" class="headerlink" title="7.HTML5 表单"></a>7.HTML5 表单</h3><ol>
+<li>HTML5新的input类型</li>
 </ol>
-<p><img src="/2019/02/01/CSS居中对齐/1-1.png" alt=""></p>
+<ul>
+<li>email</li>
+<li>url</li>
+<li>number</li>
+<li>range</li>
+<li>Date pickers (data,month,week,time,datetime,datetime-local)</li>
+<li>search</li>
+<li>color<br>Opera 对新的输入类型的支持最好。不过您已经可以在所有主流的浏览器中使用它们了。即使不被支持，仍然可以显示为常规的文本域。<br>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E-mail: &lt;input type=&quot;email&quot; name=&quot;user_email&quot; /&gt;</span><br><span class="line">Homepage: &lt;input type=&quot;url&quot; name=&quot;user_url&quot; /&gt;</span><br><span class="line">Points: &lt;input type=&quot;number&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <ol start="2">
-<li>文字跟行内块中部对齐：行内块设置vertical-align:middle;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;div1&quot;&gt;</span><br><span class="line">    文字</span><br><span class="line">	&lt;span&gt;行内块&lt;/span&gt;</span><br><span class="line">    文字</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.div1&#123;</span><br><span class="line">		border: 1px solid red;</span><br><span class="line">		width: 200px;</span><br><span class="line">		height: 80px;</span><br><span class="line">	&#125;</span><br><span class="line">	span&#123;</span><br><span class="line">		display: inline-block;</span><br><span class="line">		width: 50px;</span><br><span class="line">		height: 50px;</span><br><span class="line">		border: 1px solid gray;</span><br><span class="line">		vertical-align: middle; // 设置</span><br><span class="line">		background-color: pink;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
+<li>HTML5 的新的表单元素：</li>
 </ol>
-<p><img src="/2019/02/01/CSS居中对齐/1-2.png" alt=""></p>
+<ul>
+<li>datalist</li>
+<li>keygen</li>
+<li>output<br>datalist元素规定输入域的选项列表。列表是通过datalist内的option元素创建的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Webpage: &lt;input type=&quot;url&quot; list=&quot;url_list&quot; name=&quot;link&quot; /&gt;</span><br><span class="line">&lt;datalist id=&quot;url_list&quot;&gt;</span><br><span class="line">&lt;option label=&quot;W3School&quot; value=&quot;http://www.W3School.com.cn&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Google&quot; value=&quot;http://www.google.com&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Microsoft&quot; value=&quot;http://www.microsoft.com&quot; /&gt;</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>keygen 元素的作用是提供一种验证用户的可靠方法,但是浏览器支持不好。<br>output 元素用于不同类型的输出，比如计算或脚本输出。</p>
 <ol start="3">
-<li>文字跟图片中部对齐：图片设置vertical-align:middle;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;div1&quot;&gt;</span><br><span class="line">	&lt;img src=&quot;./bird.png&quot; alt=&quot;&quot;&gt;</span><br><span class="line">	文字</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.div1&#123;</span><br><span class="line">		border: 1px solid red;</span><br><span class="line">		width: 400px;</span><br><span class="line">		height: 220px;</span><br><span class="line">	&#125;</span><br><span class="line">	img&#123;</span><br><span class="line">		border: 1px solid purpel;</span><br><span class="line">		vertical-align: middle;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
+<li>HTML5 的新的表单属性<br>新的 form 属性：</li>
 </ol>
-<p><img src="/2019/02/01/CSS居中对齐/1-3.png" alt=""></p>
-<h3 id="2-垂直居中"><a href="#2-垂直居中" class="headerlink" title="2.垂直居中"></a>2.垂直居中</h3><ol>
-<li>盒子中块元素垂直居中：块元素position: relative;top:50%;margin-top:—盒子高度的一半;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;div1&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;div2&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.div1&#123;</span><br><span class="line">		border: 1px solid red;</span><br><span class="line">		width: 200px;</span><br><span class="line">		height: 200px;</span><br><span class="line">	&#125;</span><br><span class="line">	.div2&#123;</span><br><span class="line">		background: pink;</span><br><span class="line">		width: 100px;</span><br><span class="line">		height: 100px;</span><br><span class="line">		position: relative; // 相对定位</span><br><span class="line">		top: 50%;           // 设置</span><br><span class="line">		margin-top: -50px; // 设置</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><img src="/2019/02/01/CSS居中对齐/2-1.png" alt=""></p>
-<ol start="2">
-<li>盒子中行内块（有字）垂直居中：父盒子及行内块设置line-height:盒高;并且行内块vertical-align: middle;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;div1&quot;&gt;</span><br><span class="line">	&lt;span&gt;文字居中&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.div1&#123;</span><br><span class="line">		border: 1px solid red;</span><br><span class="line">		width: 200px;</span><br><span class="line">		height: 200px;</span><br><span class="line">		line-height: 200px; // 设置</span><br><span class="line">	&#125;</span><br><span class="line">	span&#123;</span><br><span class="line">		display: inline-block;</span><br><span class="line">		background: pink;</span><br><span class="line">		width: 100px;</span><br><span class="line">		height: 100px;</span><br><span class="line">		line-height: 100px; // 设置</span><br><span class="line">		vertical-align: middle; // 设置</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><img src="/2019/02/01/CSS居中对齐/2-2.png" alt=""></p>
-<ol start="3">
-<li>盒子中行内块（无字）垂直居中：盒子line-height:盒高;并且行内块vertical-align: middle;</li>
-<li>盒子中图片垂直居中：盒子line-height:盒高;并且图片vertical-align: middle;</li>
-<li>盒子中行内元素垂直居中：盒子line-height: 盒子高</li>
-<li>盒子中单行文本垂直字居中：盒子line-height: 盒子高</li>
-<li>盒子中多行文本垂直字居中：使用vertical-align实现垂直居中，不过vertical-align仅适用于内联元素和table-cell元素，因此之前需要转化。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;div1&quot;&gt;</span><br><span class="line">	文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字字文字文字文字文字文字文字文字文字文字文字文字</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.div1&#123;</span><br><span class="line">		border: 1px solid red;</span><br><span class="line">		width: 200px;</span><br><span class="line">		height: 200px;</span><br><span class="line">		text-align: center;</span><br><span class="line">		display: table-cell;</span><br><span class="line">		vertical-align: middle;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><img src="/2019/02/01/CSS居中对齐/2-3.png" alt=""></p>
-<h3 id="3-水平居中"><a href="#3-水平居中" class="headerlink" title="3.水平居中"></a>3.水平居中</h3><p>1.盒子中块元素居中：margin:0px auto;<br>2.盒子中行内块、图片、行内元素、文字等居中：text-align:center;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;div1&quot;&gt;</span><br><span class="line">    &lt;span&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.div1&#123;</span><br><span class="line">		border: 1px solid red;</span><br><span class="line">		width: 200px;</span><br><span class="line">		height: 200px;</span><br><span class="line">		text-align: center;</span><br><span class="line">	&#125;</span><br><span class="line">	span&#123;</span><br><span class="line">		display: inline-block;</span><br><span class="line">		width: 100px;</span><br><span class="line">		height:100px;</span><br><span class="line">		background-color: pink;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
-<p><img src="/2019/02/01/CSS居中对齐/3-1.png" alt=""></p>
-<h3 id="4-居中"><a href="#4-居中" class="headerlink" title="4.居中"></a>4.居中</h3><ol>
-<li>绝对定位居中（利用margin实现偏移）</li>
-<li>绝对定位居中（利用margin:auto实现偏移）<br>同样对子盒子实现绝对定位，这里使用top、right、bottom、left均为0，margin为auto实现偏移。</li>
-<li><p>绝对定位居中（利用transform实现偏移）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parentDiv&quot;&gt;   </span><br><span class="line">    &lt;div class=&quot;childDiv&quot;&gt;tableCell&lt;/div&gt;    </span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">[CSS]</span><br><span class="line">.parentDiv &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.parentDiv .childDiv &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left:50%;</span><br><span class="line">    top:50%;</span><br><span class="line">    -webkit-transform: translate(-50%, -50%);</span><br><span class="line">    -moz-transform: translate(-50%, -50%);</span><br><span class="line">    -ms-transform: translate(-50%, -50%);</span><br><span class="line">    -o-transform:translate(-50%, -50%) ;</span><br><span class="line">    transform:translate(-50%, -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>table-cell元素居中<br>able-cell实现居中,将父盒子设置为table-cell元素，设置text-align: center; vertical-align: middle;子盒子设置为inline-block元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parentDiv tableCell&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;id1&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;childDiv&quot;&gt;tableCell&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">[CSS]</span><br><span class="line">.tableCell &#123;</span><br><span class="line">    display: table;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tableCell .id1 &#123;</span><br><span class="line">    display: table-cell;</span><br><span class="line">    text-align: center;</span><br><span class="line">    vertical-align: middle;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tableCell .childDiv &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Flexbox居中<br>使用弹性盒模型(flexbox)实现居中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parentDiv flexBox&quot;&gt;   </span><br><span class="line">    &lt;div class=&quot;childDiv&quot;&gt;tableCell&lt;/div&gt;    </span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">[CSS]</span><br><span class="line">.flexBox &#123;</span><br><span class="line">    display: -webkit-box; /*Safari*/</span><br><span class="line">    display: -moz-box; /*Firefox*/</span><br><span class="line">    display: -ms-flexbox; /*IE*/</span><br><span class="line">    display: -webkit-flex; /*Chrome*/</span><br><span class="line">    display: flex; </span><br><span class="line">    -webkit-box-align: center;</span><br><span class="line">    -moz-box-align: center;</span><br><span class="line">    -ms-flex-align: center;</span><br><span class="line">    -webkit-align-items: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">    -webkit-box-pack: center;</span><br><span class="line">    -moz-box-pack: center;</span><br><span class="line">    -ms-flex-pack: center;</span><br><span class="line">    -webkit-justify-content: center;</span><br><span class="line">    justify-content: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>注：以上代码的公共样式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">   * &#123;</span><br><span class="line">       -webkit-box-sizing: border-box; /*Safari*/</span><br><span class="line">       -moz-box-sizing: border-box; /*Firefox*/</span><br><span class="line">       box-sizing: border-box;</span><br><span class="line">   &#125;    </span><br><span class="line">   .parentDiv &#123;</span><br><span class="line">       width:400px;</span><br><span class="line">       height: 100px;</span><br><span class="line">       background-color: #00ff00;</span><br><span class="line">       margin: 20px;</span><br><span class="line">   &#125;   </span><br><span class="line">   .childDiv &#123;</span><br><span class="line">       width: 200px;</span><br><span class="line">       height:50px;</span><br><span class="line">       background-color: #ff0000;</span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
-<p>以上代码的效果图：<br><img src="/2019/02/01/CSS居中对齐/4-1.png" alt=""></p>
-<p>参考网页：<br><a href="https://blog.csdn.net/csdn_heshangzhou/article/details/80645319" target="_blank" rel="noopener">css居中对齐大全-和尚周</a><br><a href="http://www.cnblogs.com/janessasmith/p/3702733.html" target="_blank" rel="noopener">利用CSS实现居中对齐-末伏</a></p>
+<ul>
+<li>autocomplete</li>
+<li>novalidate<br>新的 input 属性：</li>
+<li>autocomplete</li>
+<li>autofocus</li>
+<li>form</li>
+<li>form overrides (formaction, formenctype, formmethod, formnovalidate, formtarget)</li>
+<li>height 和 width</li>
+<li>list</li>
+<li>min, max, step</li>
+<li>multiple</li>
+<li>pattern (regexp)</li>
+<li>placeholder</li>
+<li>required</li>
+</ul>
+<p>autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。<br>autocomplete 适用于form标签，以及以下类型的input标签：text, search, url, telephone, email, password, datepickers, range 以及 color。<br>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;demo_form.asp&quot; method=&quot;get&quot; autocomplete=&quot;on&quot;&gt;</span><br><span class="line">First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;br /&gt;</span><br><span class="line">Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;br /&gt;</span><br><span class="line">E-mail: &lt;input type=&quot;email&quot; name=&quot;email&quot; autocomplete=&quot;off&quot; /&gt;&lt;br /&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; /&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
+<p>height 和 width 属性规定用于 image 类型的 input 标签的图像高度和宽度。</p>
+<p>参考网页：<br><a href="http://www.w3school.com.cn/html5/index.asp" target="_blank" rel="noopener">W3school-HTML5教程</a></p>
 
           
         
@@ -434,7 +528,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -484,7 +578,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -495,7 +589,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

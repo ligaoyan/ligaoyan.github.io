@@ -250,7 +250,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/01/05/CSS基础三/">
+    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/01/23/CSS基础四/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ligaoyan">
@@ -269,7 +269,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/05/CSS基础三/" itemprop="url">CSS基础三</a></h1>
+                <a class="post-title-link" href="/2019/01/23/CSS基础四/" itemprop="url">CSS基础四</a></h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-05T11:47:53+08:00">
-                2019-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T21:02:23+08:00">
+                2019-01-23
               </time>
             
 
@@ -343,58 +343,56 @@
       
         
           
-            <h3 id="1-CSS框模型"><a href="#1-CSS框模型" class="headerlink" title="1.CSS框模型"></a>1.CSS框模型</h3><p>CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边框和外边距的方式。<br>元素的背景应用于由内容和内边距、边框组成的区域。<br>许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  padding: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+            <h3 id="1-外边距塌陷问题"><a href="#1-外边距塌陷问题" class="headerlink" title="1.外边距塌陷问题"></a>1.外边距塌陷问题</h3><p>块级元素的上下外边距有时候会合并，合并后的外边距等于合并前两个外边距中的较大值，这种现象称为外边距塌陷。<br>外边距的塌陷问题只会在垂直之间产生塌陷；水平之间不受影响的；<br>两个盒子的垂直外边距完全接触才会触发。<br>两个盒子上下分布时，出现外边距塌陷很常见。<br>当两个盒子嵌套时，对里面的盒子设置margin-top:10px;时，外面的盒子会和里面的盒子一起向下移动，有两种解决方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. .father &#123;border: 1px solid black;&#125;</span><br><span class="line"></span><br><span class="line">2. .father &#123;overflow: hidden;&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-清除浮动的方法"><a href="#2-清除浮动的方法" class="headerlink" title="2.清除浮动的方法"></a>2.清除浮动的方法</h3><p>为了解决父级元素因为子集元素为浮动而引起内部高度为0的问题</p>
 <ol>
-<li>内边距<br>元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性。<br>padding 属性接受长度值或百分比值，但不允许使用负值。<br>padding-top,padding-right,padding-bottom,padding-right分别设置内边距的上、左、下、右的值。</li>
-<li>边框<br>CSS的border-style属性用来为边框定义样式，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p.aside &#123;border-style: solid dotted dashed double;&#125;</span><br></pre></td></tr></table></figure>
+<li>额外标签法<br>在浮动元素末尾添加一个div<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</span><br><span class="line">.clear &#123;clear: both;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>上面这条规则为类名为 aside 的段落定义了四种边框样式：实线上边框、点线右边框、虚线下边框和一个双线左边框。<br>也可以用border-top-style，border-right-style，border-bottom-style，borderleft-style来定义边框样式。<br>border-style：none；边框将不存在。<br>border-width定义边框的宽度，border-color定义边框颜色。</p>
+<p>缺点：多一个无意义的标签，结构化差</p>
+<ol start="2">
+<li>父级元素添加overflower属性方法，常用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.father &#123;width: 98%; overflower: hidden;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>原理：必须定义width或zoom:1，同时不能定义height。使用overflower:hidden时，浏览器会自动检查浮动区域的高度。<br>优点：简单代码少<br>缺点：不能和position配合使用，因为超出部分会被隐藏</p>
 <ol start="3">
-<li>外边距<br>设置外边距的最简单的方法就是使用 margin 属性。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;margin : 10px 0px 15px 5px;&#125; // 分别设置上、右、下、左外边距的值</span><br><span class="line">h1 &#123;margin: 0.25em 1em 0.5em;&#125;	/* 等价于 0.25em 1em 0.5em 1em */</span><br><span class="line">h2 &#123;margin: 0.5em 1em;&#125;		/* 等价于 0.5em 1em 0.5em 1em */</span><br><span class="line">p &#123;margin: 1px;&#125;			/* 等价于 1px 1px 1px 1px */</span><br></pre></td></tr></table></figure>
+<li>使用after伪元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;father clearfix&quot;&gt;&lt;/div&gt;</span><br><span class="line">.clearfix:after&#123;      // 正常浏览器清除浮动</span><br><span class="line">	content:&quot;&quot;;</span><br><span class="line">	display: block;</span><br><span class="line">	height: 0;</span><br><span class="line">	clear: both;</span><br><span class="line">	visibility: hidden;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix&#123;           // IE7以下版本</span><br><span class="line">	*zoom: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>也可以使用margin-top,margin-right,margin-bottom,margin-right来定义外边距。</p>
+<p>优点：浏览器支持好，推荐使用</p>
 <ol start="4">
-<li>外边距合并<br>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。<br>合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</li>
+<li>使用before,after双伪元素清除浮动<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;father clearfix&quot;&gt;&lt;/div&gt;</span><br><span class="line">.clearfix:before,clearfix:after &#123;      // 正常浏览器清除浮动</span><br><span class="line">	content:&quot;&quot;;</span><br><span class="line">	display: table; // 块级表格元素</span><br><span class="line">&#125;</span><br><span class="line">.clearfix:after &#123;</span><br><span class="line">	clear: both;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix &#123;</span><br><span class="line">	*zoom: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<ul>
-<li>当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并。</li>
-<li>当一个元素包含在另一个元素中时（假设没有内边距或边框把外边距分隔开），它们的上和/或下外边距也会发生合并。</li>
-<li>假设有一个空元素，它有外边距，但是没有边框或填充，在这种情况下，上外边距与下外边距就碰到了一起，它们会发生合并。<br>注意：只有普通文档流中块框的垂直外边距才会发生外边距合并。行内框、浮动框或绝对定位之间的外边距不会合并。</li>
-</ul>
-<h3 id="2-CSS定位"><a href="#2-CSS定位" class="headerlink" title="2.CSS定位"></a>2.CSS定位</h3><p>CSS 有三种基本的定位机制：普通流、浮动和绝对定位。</p>
+<p>优点：浏览器支持好，推荐使用</p>
+<ol start="5">
+<li>父级div手动定义height，解决了父级div无法自动获取到高度的问题。只适合高度固定的布局，不推荐使用。</li>
+</ol>
+<h3 id="3-定位补充"><a href="#3-定位补充" class="headerlink" title="3.定位补充"></a>3.定位补充</h3><ol>
+<li>子绝父相<br>绝对定位是相对于最近的已定位祖先元素，如果元素没有已定位的祖先元素，那么它的位置相对于最初的包含块。<br>子绝父相就是指子元素设置绝对定位，而父元素设置相对定位，然后设置子元素的top、left、right、bottom的值，我们就可以让子元素到达相应的位置。</li>
+<li>z-index叠放次序<br>只有定位的盒子才能用这个属性。<br>如果为正数，则离用户更近，为负数则表示离用户更远。</li>
+</ol>
+<h3 id="4-元素的显示与隐藏"><a href="#4-元素的显示与隐藏" class="headerlink" title="4.元素的显示与隐藏"></a>4.元素的显示与隐藏</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div &#123;display: none;&#125; // 隐藏后不保留位置</span><br><span class="line">div &#123;display: block;&#125; // 显示</span><br><span class="line"></span><br><span class="line">div &#123;visibility: inherit;&#125;</span><br><span class="line">div &#123;visibility: visible;&#125; // 显示</span><br><span class="line">div &#123;visibility: hidden;&#125; // 隐藏后保留位置</span><br></pre></td></tr></table></figure>
+<h3 id="5-溢出文字隐藏，带省略号"><a href="#5-溢出文字隐藏，带省略号" class="headerlink" title="5.溢出文字隐藏，带省略号"></a>5.溢出文字隐藏，带省略号</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">	white-space: nowrap; // 强制一行显示 || normal，默认自动换行</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	text-overflow: ellipsis; // 用...标记||clip,不显示省略标记</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-CSS-Sprites精灵图"><a href="#6-CSS-Sprites精灵图" class="headerlink" title="6.CSS Sprites精灵图"></a>6.CSS Sprites精灵图</h3><p>Css sprites是将多张零散的背景图片整合到一张背景图上，然后通过background-position来调整背景的位置；<br>确保使用该张精灵图的容器要比背景图片小才是OK的，不然很容易漏出其他的背景图片，所以尤其要控制好盒子的大小；<br>这样做的目的就是为了降低浏览器向服务器的请求次数，可以大大提高网页的加载速度。</p>
+<h3 id="7-字体图标"><a href="#7-字体图标" class="headerlink" title="7.字体图标"></a>7.字体图标</h3><p>字体图标的本质是文字，可以随意改变颜色、大小、产生阴影、透明效果等，几乎支持所有浏览器。<br>使用流程：</p>
 <ol>
-<li>相对定位<br>如果对一个元素进行相对定位，可以通过设置垂直或水平位置，让这个元素“相对于”它本来要出现的位置的进行移动，原来的位置还存在。</li>
-<li>绝对定位<br>设置为绝对定位的元素框从文档流完全删除，并相对于其包含块定位，包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像该元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。</li>
-<li>浮动<br>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。<br>由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。</li>
-<li>浮动元素内幕<br>首先需要建立包含块的概念。浮动元素的包含块是其最近的块级祖先元素。一个元素无论之前是行内元素还是块级元素，在浮动了之后都是成为一个块级框，它会像块级元素一样摆放和表现。<br>浮动元素的左（或右）外边界不能超出其包含块的左（或右）padding边界，浮动元素的上（或下）外边界不能超出其包含块的左（或右）padding边界。这一点和absolute元素不一样，absolute元素是不能超出其父元素的border边界。（比如说不能超出其包含块的左padding边界，意思是浮动元素不能进入padding范围内，就是不包括padding）<br>浮动元素的左（或右）外边界必须是源文档中之前出现的左浮动（或右浮动）元素的右（左）外边界，除非后出现的浮动元素的顶端在先出现浮动元素的底端下面。</li>
-</ol>
-<h3 id="3-选择器的解析方向"><a href="#3-选择器的解析方向" class="headerlink" title="3.选择器的解析方向"></a>3.选择器的解析方向</h3><p>从右到左，先拿到目标节点的描述，匹配到可能的节点后，再查找父节点。而从左到右解析，先匹配上层元素，再一层层向下匹配，当匹配不到，需要回溯上一层重新匹配。众所周知，在DOM树中一个元素可能有若干子元素，如果每一个都去判断一下显然性能太差。而一个子元素只有一个父元素，所以找起来非常方便。<br>所以我们的CSS解析器是从右向左匹配节点的。这样做是为了减少无效匹配次数，从而匹配快、性能更优。</p>
-<h3 id="4-盒模型"><a href="#4-盒模型" class="headerlink" title="4.盒模型"></a>4.盒模型</h3><p>W3C标准盒模型和IE盒模型<br>水平方向盒模型是由margin-left、border-left、padding-left、content、padding-right、border-right、margin-right组成。<br>W3C标准盒模型的宽度和高度分别是content的width和height<br>IE标准盒模型的宽度和高度分别是content+padding+border的width和height<br>使用box-sizing来切换盒模型。Box-sizing:border-box就是IE盒模型，box-sizing:content-box就是W3C盒模型。<br>使用box-sizing: border-box，在设置有padding值和border值的时候将不会把宽度撑开。<br>也可以回避这个问题，也就是，不要给元素添加具有指定宽度的内边距，而是尝试将内边距或外边距添加到元素的父元素和子元素。</p>
-<h3 id="5-包含块"><a href="#5-包含块" class="headerlink" title="5.包含块"></a>5.包含块</h3><p>之前在浮动元素中就已经说了包含块的概念。<br>对于一个非根元素，如果其position值是relative或static，包含块则是由最近的块级框、表单元格或行内祖先框的内容边界构成。<br>对于一个非根元素，如果其position值是absolute，包含块是最近的position不是static的祖先元素。</p>
-<p>如果这个祖先元素是块级元素，包含块则设置为该元素的内边距边界。<br>如果这个祖先元素是行内元素，包含块则设置为该祖先元素的内容边界。<br>一个框里横向排列三个块，怎样让这三个块的宽度均为包含块的1/3，尽量说出两种方法<br>使用flex<br>使用float，让三个元素都float<br>使用display: inline-block，并用font-size去除行内块元素的间隔</p>
-<h3 id="6-补充"><a href="#6-补充" class="headerlink" title="6.补充"></a>6.补充</h3><ol>
-<li><p>去除行内块元素的间隙<br>在父元素上设置font-size为0。<br>在父元素上设置letter-spacing和word-spacing为-6左右。<br>取消标签闭合。<br>移除标签间的空格。</p>
+<li>下载兼容字体文件包到本地,推荐网址：<a href="http://icomoon.io" target="_blank" rel="noopener">icomoon字库</a>，<a href="http://www.iconfont.cn/" target="_blank" rel="noopener">阿里icon font字库</a></li>
+<li>解压下载包，取出font文件夹，放到相应路径</li>
+<li><p>在样式里声明字体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">	@font-face &#123;  /*声明字体  引用字体*/</span><br><span class="line">	  font-family: &quot;icomoon&quot;;  /*我们自己起名字可以*/</span><br><span class="line">	  src:  url(&apos;fonts/icomoon.eot?7kkyc2&apos;);</span><br><span class="line">	  src:  url(&apos;fonts/icomoon.eot?7kkyc2#iefix&apos;) format(&apos;embedded-opentype&apos;),</span><br><span class="line">	    url(&apos;fonts/icomoon.ttf?7kkyc2&apos;) format(&apos;truetype&apos;),</span><br><span class="line">	    url(&apos;fonts/icomoon.woff?7kkyc2&apos;) format(&apos;woff&apos;),</span><br><span class="line">	    url(&apos;fonts/icomoon.svg?7kkyc2#icomoon&apos;) format(&apos;svg&apos;);</span><br><span class="line">	  font-style: normal;  /*倾斜字体正常*/</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>box-shadow<br>box-shadow: h-shadow v-shadow blur spread color inset;<br>其中h-shadow（水平阴影位置）， v-shadow（垂直阴影位置）必需，可以为负值。<br>blur是模糊距离，spread是阴影尺寸。</p>
+<li><p>给盒子使用字体<br>打开解压的文件里的demo.html，下载的字体信息都在里面，复制小方块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">span::before &#123;</span><br><span class="line">	content: &quot;\e900&quot;;</span><br><span class="line">&#125;</span><br><span class="line">或者：</span><br><span class="line">&lt;span&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>块级元素和行内元素<br>块级元素：div\p\form\table\header\footer\section\h1-6<br>行内元素：span\i\a\input\button\label\select</p>
+<li><p>声明字体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">span &#123;</span><br><span class="line">	font-family: icomoon;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<ul>
-<li>块级元素独自占一行且宽度会占满父元素宽度，行内元素不会独占一行</li>
-<li>块级元素可以设置weith和height，行内元素设置width和height无效</li>
-<li>块级元素可以设置margin和padding属性，行内元素水平方向的margin和padding如margin-left、padding-right可以产生边距效果，但是竖直方向的如padding-top和margin-bottom不会产生边距效果</li>
-<li>display：inline-block；可以让元素具有块级元素和行内元素的特性：既可以设置长宽，可以让padding和margin生效，又可以和其他行内元素并排。</li>
-</ul>
-<p>注意：</p>
-<ul>
-<li>行内元素尽量只包含行内元素</li>
-<li>p标签和h1标签文字类块级元素，里面不能放块级元素</li>
-<li>a标签不能嵌套，但a里可以放块级元素    </li>
-</ul>
-<p>参考网页：<a href="https://www.w3cschool.cn/css/css_syntax.asp" target="_blank" rel="noopener">W3Cschool CSS教程</a><br>参考书籍：《CSS权威指南》，作者：Eric A.Meyer</p>
+<h5 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h5><ol>
+<li>上传生成字体图标<br>UI设计人员给我们svg格式的文件，我们需要上传生成字体图标，在<a href="http://icomoon.io" target="_blank" rel="noopener">icomoon字库</a>网站，点击Import Icons，将本地的svg文件上传，</li>
+<li>追加字体图标<br>点击Import Icons，导入我们以前的selection.json文件</li>
+</ol>
 
           
         
@@ -434,7 +432,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -484,7 +482,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -495,7 +493,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
