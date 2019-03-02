@@ -281,7 +281,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T08:58:52+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T21:05:55+08:00">
                 2019-02-24
               </time>
             
@@ -343,140 +343,140 @@
       
         
           
-            <h3 id="1-jQuery-��װ"><a href="#1-jQuery-��װ" class="headerlink" title="1.jQuery ��װ"></a>1.jQuery ��װ</h3><p>jQuery����һ��JavaScript�ļ�������ʹ��HTML��script��ǩ��������<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-jQuery-ѡ����"><a href="#2-jQuery-ѡ����" class="headerlink" title="2.jQuery ѡ����"></a>2.jQuery ѡ����</h3><ol>
-<li>jQuery Ԫ��ѡ����</li>
+            <h3 id="1-jQuery-安装"><a href="#1-jQuery-安装" class="headerlink" title="1.jQuery 安装"></a>1.jQuery 安装</h3><p>jQuery库是一个JavaScript文件，可以使用HTML的script标签引用它：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-jQuery-选择器"><a href="#2-jQuery-选择器" class="headerlink" title="2.jQuery 选择器"></a>2.jQuery 选择器</h3><ol>
+<li>jQuery 元素选择器</li>
 </ol>
 <ul>
-<li>$(“p”) ѡȡpԪ�ء�</li>
-<li>$(“p.intro”) ѡȡ���� class=”intro” ��pԪ�ء�</li>
-<li>$(“p#demo”) ѡȡ���� id=”demo” ��pԪ�ء�</li>
+<li>$(“p”) 选取p元素。</li>
+<li>$(“p.intro”) 选取所有 class=”intro” 的p元素。</li>
+<li>$(“p#demo”) 选取所有 id=”demo” 的p元素。</li>
 </ul>
 <ol start="2">
-<li>jQuery ����ѡ����</li>
+<li>jQuery 属性选择器</li>
 </ol>
 <ul>
-<li>$(“[href]”) ѡȡ���д��� href ���Ե�Ԫ�ء�</li>
-<li>$(“[href=’#’]”) ѡȡ���д��� href ֵ����”#”��Ԫ�ء�</li>
-<li>$(“[href!=’#’]”) ѡȡ���д��� href ֵ������”#”��Ԫ�ء�</li>
-<li>$(“[href$=’.jpg’]”) ѡȡ���� hrefnֵ��”.jpg”��β��Ԫ�ء�</li>
+<li>$(“[href]”) 选取所有带有 href 属性的元素。</li>
+<li>$(“[href=’#’]”) 选取所有带有 href 值等于”#”的元素。</li>
+<li>$(“[href!=’#’]”) 选取所有带有 href 值不等于”#”的元素。</li>
+<li>$(“[href$=’.jpg’]”) 选取所有 hrefn值以”.jpg”结尾的元素。</li>
 </ul>
 <ol start="3">
-<li>jQuery CSS ѡ����<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).css(&quot;background-color&quot;,&quot;red&quot;);</span><br></pre></td></tr></table></figure>
+<li>jQuery CSS 选择器<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).css(&quot;background-color&quot;,&quot;red&quot;);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="3-jQuery-Ч��"><a href="#3-jQuery-Ч��" class="headerlink" title="3.jQuery Ч��"></a>3.jQuery Ч��</h3><ol>
-<li>���غ���ʾ<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(selector).hide(speed,callback);</span><br><span class="line">$(selector).show(speed,callback);</span><br><span class="line">$(selector).toggle(speed,callback); // �л�hide()��show()����</span><br></pre></td></tr></table></figure>
+<h3 id="3-jQuery-效果"><a href="#3-jQuery-效果" class="headerlink" title="3.jQuery 效果"></a>3.jQuery 效果</h3><ol>
+<li>隐藏和显示<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(selector).hide(speed,callback);</span><br><span class="line">$(selector).show(speed,callback);</span><br><span class="line">$(selector).toggle(speed,callback); // 切换hide()和show()方法</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>��ѡ��speed�����涨����/��ʾ���ٶȣ�����ȡ����ֵ��”slow”��”fast”����롣<br>��ѡ��callback���������ػ���ʾ��ɺ���ִ�еĺ������ơ�</p>
+<p>可选的speed参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast”或毫秒。<br>可选的callback参数是隐藏或显示完成后所执行的函数名称。</p>
 <ol start="2">
-<li><p>���뵭��</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div2&quot;).fadeIn(&quot;slow&quot;); // ����</span><br><span class="line">$(&quot;#div3&quot;).fadeOut(3000); // ����</span><br><span class="line">$(&quot;#div3&quot;).fadeToggle(3000);</span><br><span class="line">$(selector).fadeTo(speed,opacity,callback); // �����speed�����涨Ч��ʱ��</span><br><span class="line"> // �����opacity���������뵭��Ч������Ϊ�����Ĳ�͸���ȣ�ֵ����0��1֮�䣩��</span><br></pre></td></tr></table></figure>
+<li><p>淡入淡出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div2&quot;).fadeIn(&quot;slow&quot;); // 淡入</span><br><span class="line">$(&quot;#div3&quot;).fadeOut(3000); // 淡出</span><br><span class="line">$(&quot;#div3&quot;).fadeToggle(3000);</span><br><span class="line">$(selector).fadeTo(speed,opacity,callback); // 必需的speed参数规定效果时长</span><br><span class="line"> // 必需的opacity参数将淡入淡出效果设置为给定的不透明度（值介于0与1之间）。</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>����</p>
+<li><p>滑动</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(selector).slideDown(speed,callback);</span><br><span class="line">$(selector).slideUp(speed,callback);</span><br><span class="line">$(selector).slideToggle(speed,callback);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>����<br>jQuery animate() �������ڴ����Զ��嶯����</p>
+<li><p>动画<br>jQuery animate() 方法用于创建自定义动画。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).animate(&#123;params&#125;,speed,callback);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>����� params ���������γɶ����� CSS ���ԡ�<br>speed,callback��ѡ<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;div&quot;).animate(&#123;</span><br><span class="line">    left:&apos;250px&apos;,</span><br><span class="line">    opacity:&apos;0.5&apos;,</span><br><span class="line">    height:&apos;150px&apos;,</span><br><span class="line">    width:&apos;150px&apos;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>必需的 params 参数定义形成动画的 CSS 属性。<br>speed,callback可选<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;div&quot;).animate(&#123;</span><br><span class="line">    left:&apos;250px&apos;,</span><br><span class="line">    opacity:&apos;0.5&apos;,</span><br><span class="line">    height:&apos;150px&apos;,</span><br><span class="line">    width:&apos;150px&apos;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <ol start="5">
-<li><p>ֹͣ����</p>
+<li><p>停止动画</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#stop&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;#panel&quot;).stop();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>jQuery Chaining<br>jQuery������������ͬ��Ԫ�������ж���jQuery���һ��������һ��</p>
+<li><p>jQuery Chaining<br>jQuery允许我们在相同的元素上运行多条jQuery命令，一条接着另一条</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#p1&quot;).css(&quot;color&quot;,&quot;red&quot;).slideUp(2000).slideDown(2000);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="4-jQuery-HTML"><a href="#4-jQuery-HTML" class="headerlink" title="4.jQuery HTML"></a>4.jQuery HTML</h3><ol>
-<li>text()��html()��val()�Լ�attr()<br>��ȡ��<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert(&quot;Text: &quot; + $(&quot;#test&quot;).text()); // �������</span><br><span class="line">alert(&quot;HTML: &quot; + $(&quot;#test&quot;).html()); // �������</span><br><span class="line">alert(&quot;Value: &quot; + $(&quot;#test&quot;).val()); // ��������ֶε�ֵ</span><br><span class="line">alert($(&quot;#w3s&quot;).attr(&quot;href&quot;)); // ��ȡ����ֵ</span><br></pre></td></tr></table></figure>
+<li>text()、html()、val()以及attr()<br>获取：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert(&quot;Text: &quot; + $(&quot;#test&quot;).text()); // 获得内容</span><br><span class="line">alert(&quot;HTML: &quot; + $(&quot;#test&quot;).html()); // 获得内容</span><br><span class="line">alert(&quot;Value: &quot; + $(&quot;#test&quot;).val()); // 获得输入字段的值</span><br><span class="line">alert($(&quot;#w3s&quot;).attr(&quot;href&quot;)); // 获取属性值</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>���ã�<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#test1&quot;).text(&quot;Hello world!&quot;); // </span><br><span class="line">$(&quot;#test2&quot;).html(&quot;&lt;b&gt;Hello world!&lt;/b&gt;&quot;); // </span><br><span class="line">$(&quot;#test3&quot;).val(&quot;Dolly Duck&quot;); // </span><br><span class="line">$(&quot;#w3s&quot;).attr(&quot;href&quot;,&quot;http://www.w3school.com.cn/jquery&quot;); // ����href���Ե�ֵ</span><br></pre></td></tr></table></figure></p>
-<p>text()��html() �Լ� val() �Ļص�������<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#test1&quot;).text(function(i,origText)&#123;</span><br><span class="line">    return &quot;Old text: &quot; + origText + &quot; New text: Hello world!</span><br><span class="line">    (index: &quot; + i + &quot;)&quot;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>�ص�������������������ѡԪ���б��е�ǰԪ�ص��±꣬�Լ�ԭʼ���ɵģ�ֵ��Ȼ���Ժ�����ֵ������ϣ��ʹ�õ��ַ�����</p>
+<p>设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#test1&quot;).text(&quot;Hello world!&quot;); // </span><br><span class="line">$(&quot;#test2&quot;).html(&quot;&lt;b&gt;Hello world!&lt;/b&gt;&quot;); // </span><br><span class="line">$(&quot;#test3&quot;).val(&quot;Dolly Duck&quot;); // </span><br><span class="line">$(&quot;#w3s&quot;).attr(&quot;href&quot;,&quot;http://www.w3school.com.cn/jquery&quot;); // 设置href属性的值</span><br></pre></td></tr></table></figure></p>
+<p>text()、html() 以及 val() 的回调函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#test1&quot;).text(function(i,origText)&#123;</span><br><span class="line">    return &quot;Old text: &quot; + origText + &quot; New text: Hello world!</span><br><span class="line">    (index: &quot; + i + &quot;)&quot;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
 <ol start="2">
-<li>jQuery���Ԫ��<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">append() - �ڱ�ѡԪ�صĽ�β��������</span><br><span class="line">prepend() - �ڱ�ѡԪ�صĿ�ͷ��������</span><br><span class="line">$(&quot;img&quot;).after(&quot;Some text after&quot;); // ��ѡԪ��֮�����</span><br><span class="line">$(&quot;img&quot;).before(&quot;Some text before&quot;); // ��ѡԪ��֮ǰ����</span><br></pre></td></tr></table></figure>
+<li>jQuery添加元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">append() - 在被选元素的结尾插入内容</span><br><span class="line">prepend() - 在被选元素的开头插入内容</span><br><span class="line">$(&quot;img&quot;).after(&quot;Some text after&quot;); // 被选元素之后插入</span><br><span class="line">$(&quot;img&quot;).before(&quot;Some text before&quot;); // 被选元素之前插入</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>��Ӷ��Ԫ�أ�<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function appendText()</span><br><span class="line">&#123;</span><br><span class="line">var txt1=&quot;&lt;p&gt;Text.&lt;/p&gt;&quot;;               // �� HTML ������Ԫ��</span><br><span class="line">var txt2=$(&quot;&lt;p&gt;&lt;/p&gt;&quot;).text(&quot;Text.&quot;);   // �� jQuery ������Ԫ��</span><br><span class="line">var txt3=document.createElement(&quot;p&quot;);  // �� DOM ������Ԫ��</span><br><span class="line">txt3.innerHTML=&quot;Text.&quot;;</span><br><span class="line">$(&quot;p&quot;).append(txt1,txt2,txt3);         // ׷����Ԫ��</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>添加多个元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function appendText()</span><br><span class="line">&#123;</span><br><span class="line">var txt1=&quot;&lt;p&gt;Text.&lt;/p&gt;&quot;;               // 以 HTML 创建新元素</span><br><span class="line">var txt2=$(&quot;&lt;p&gt;&lt;/p&gt;&quot;).text(&quot;Text.&quot;);   // 以 jQuery 创建新元素</span><br><span class="line">var txt3=document.createElement(&quot;p&quot;);  // 以 DOM 创建新元素</span><br><span class="line">txt3.innerHTML=&quot;Text.&quot;;</span><br><span class="line">$(&quot;p&quot;).append(txt1,txt2,txt3);         // 追加新元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ol start="3">
-<li>jQuery ɾ��Ԫ��</li>
+<li>jQuery 删除元素</li>
 </ol>
 <ul>
-<li>remove() - ɾ����ѡԪ�أ�������Ԫ�أ�</li>
-<li>empty() - �ӱ�ѡԪ����ɾ����Ԫ��</li>
+<li>remove() - 删除被选元素（及其子元素）</li>
+<li>empty() - 从被选元素中删除子元素</li>
 </ul>
 <ol start="4">
-<li>jQuery����CSS</li>
+<li>jQuery操作CSS</li>
 </ol>
 <ul>
-<li>addClass() - ��ѡԪ�����һ��������</li>
-<li>removeClass() - �ӱ�ѡԪ��ɾ��һ��������</li>
-<li>toggleClass() - �Ա�ѡԪ�ؽ������/ɾ������л�����</li>
-<li>css() - ���û򷵻���ʽ����<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;h1,h2,p&quot;).addClass(&quot;blue&quot;);</span><br></pre></td></tr></table></figure>
+<li>addClass() - 向被选元素添加一个或多个类</li>
+<li>removeClass() - 从被选元素删除一个或多个类</li>
+<li>toggleClass() - 对被选元素进行添加/删除类的切换操作</li>
+<li>css() - 设置或返回样式属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;h1,h2,p&quot;).addClass(&quot;blue&quot;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ol start="5">
 <li><p>jQuery css()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).css(&quot;background-color&quot;); // �����׸�ƥ��Ԫ�ص�background-colorֵ</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).css(&quot;background-color&quot;); // 返回首个匹配元素的background-color值</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>jQuery �ߴ�</p>
+<li><p>jQuery 尺寸</p>
 </li>
 </ol>
 <ul>
-<li>width() �������û򷵻�Ԫ�صĿ�ȣ��������ڱ߾ࡢ�߿����߾ࣩ��</li>
-<li>height() �������û򷵻�Ԫ�صĸ߶ȣ��������ڱ߾ࡢ�߿����߾ࣩ��</li>
-<li>innerWidth() ��������Ԫ�صĿ�ȣ������ڱ߾ࣩ��</li>
-<li>innerHeight() ��������Ԫ�صĸ߶ȣ������ڱ߾ࣩ��</li>
-<li>outerWidth() ��������Ԫ�صĿ�ȣ������ڱ߾�ͱ߿򣩡�</li>
-<li>outerHeight() ��������Ԫ�صĸ߶ȣ������ڱ߾�ͱ߿򣩡�<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div1&quot;).outerWidth()</span><br></pre></td></tr></table></figure>
+<li>width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。</li>
+<li>height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。</li>
+<li>innerWidth() 方法返回元素的宽度（包括内边距）。</li>
+<li>innerHeight() 方法返回元素的高度（包括内边距）。</li>
+<li>outerWidth() 方法返回元素的宽度（包括内边距和边框）。</li>
+<li>outerHeight() 方法返回元素的高度（包括内边距和边框）。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div1&quot;).outerWidth()</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="5-jQuery-����"><a href="#5-jQuery-����" class="headerlink" title="5.jQuery ����"></a>5.jQuery ����</h3><ol>
-<li>����</li>
+<h3 id="5-jQuery-遍历"><a href="#5-jQuery-遍历" class="headerlink" title="5.jQuery 遍历"></a>5.jQuery 遍历</h3><ol>
+<li>祖先</li>
 </ol>
 <ul>
-<li>parent() �������ر�ѡԪ�ص�ֱ�Ӹ�Ԫ�ء�</li>
-<li>parents() �������ر�ѡԪ�ص���������Ԫ�أ���һ·����ֱ���ĵ��ĸ�Ԫ�� (html)��</li>
-<li>parentsUntil() �������ؽ�����������Ԫ��֮�����������Ԫ�ء�</li>
+<li>parent() 方法返回被选元素的直接父元素。</li>
+<li>parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (html)。</li>
+<li>parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。</li>
 </ul>
 <ol start="2">
-<li>���</li>
+<li>后代</li>
 </ol>
 <ul>
-<li>children() �������ر�ѡԪ�ص�����ֱ����Ԫ�ء�</li>
-<li>find() �������ر�ѡԪ�صĺ��Ԫ�أ�һ·����ֱ�����һ�������</li>
+<li>children() 方法返回被选元素的所有直接子元素。</li>
+<li>find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。</li>
 </ul>
 <ol start="3">
-<li>ͬ��</li>
+<li>同胞</li>
 </ol>
 <ul>
-<li>siblings() �������ر�ѡԪ�ص�����ͬ��Ԫ�ء�</li>
-<li>next() �������ر�ѡԪ�ص���һ��ͬ��Ԫ�ء�</li>
-<li>nextAll() �������ر�ѡԪ�ص����и����ͬ��Ԫ�ء�</li>
-<li>nextUntil() �������ؽ���������������֮������и����ͬ��Ԫ�ء�</li>
+<li>siblings() 方法返回被选元素的所有同胞元素。</li>
+<li>next() 方法返回被选元素的下一个同胞元素。</li>
+<li>nextAll() 方法返回被选元素的所有跟随的同胞元素。</li>
+<li>nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。</li>
 </ul>
 <ol start="4">
-<li>����</li>
+<li>过滤</li>
 </ol>
 <ul>
-<li>first() �������ر�ѡԪ�ص��׸�Ԫ�ء�</li>
-<li>last() �������ر�ѡԪ�ص����һ��Ԫ�ء�</li>
-<li>eq() �������ر�ѡԪ���д���ָ�������ŵ�Ԫ�ء�</li>
+<li>first() 方法返回被选元素的首个元素。</li>
+<li>last() 方法返回被选元素的最后一个元素。</li>
+<li>eq() 方法返回被选元素中带有指定索引号的元素。</li>
 </ul>
-<h3 id="6-jQuery-AJAX"><a href="#6-jQuery-AJAX" class="headerlink" title="6.jQuery AJAX"></a>6.jQuery AJAX</h3><p>jQuery load() �����Ǽ򵥵�ǿ��� AJAX ������<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).load(URL,data,callback);</span><br></pre></td></tr></table></figure></p>
-<p>�����URL�����涨��ϣ�����ص�URL����ѡ��data�����涨������һͬ���͵Ĳ�ѯ�ַ�����/ֵ�Լ��ϡ���ѡ��callback�����涨��load()������ɺ���Ҫ����Ļص��������ص������������ò�ͬ�Ĳ����� </p>
+<h3 id="6-jQuery-AJAX"><a href="#6-jQuery-AJAX" class="headerlink" title="6.jQuery AJAX"></a>6.jQuery AJAX</h3><p>jQuery load() 方法是简单但强大的 AJAX 方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).load(URL,data,callback);</span><br></pre></td></tr></table></figure></p>
+<p>必需的URL参数规定您希望加载的URL。可选的data参数规定与请求一同发送的查询字符串键/值对集合。可选的callback参数规定当load()方法完成后所要允许的回调函数。回调函数可以设置不同的参数： </p>
 <ul>
-<li>responseTxt - �������óɹ�ʱ�Ľ������</li>
-<li>statusTXT - �������õ�״̬</li>
-<li>xhr - ���� XMLHttpRequest ����<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;#div1&quot;).load(&quot;demo_test.txt&quot;,function(responseTxt,statusTxt,xhr)&#123;</span><br><span class="line">    if(statusTxt==&quot;success&quot;)</span><br><span class="line">      alert(&quot;�ⲿ���ݼ��سɹ���&quot;);</span><br><span class="line">    if(statusTxt==&quot;error&quot;)</span><br><span class="line">      alert(&quot;Error: &quot;+xhr.status+&quot;: &quot;+xhr.statusText);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<li>responseTxt - 包含调用成功时的结果内容</li>
+<li>statusTXT - 包含调用的状态</li>
+<li>xhr - 包含 XMLHttpRequest 对象<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;#div1&quot;).load(&quot;demo_test.txt&quot;,function(responseTxt,statusTxt,xhr)&#123;</span><br><span class="line">    if(statusTxt==&quot;success&quot;)</span><br><span class="line">      alert(&quot;外部内容加载成功！&quot;);</span><br><span class="line">    if(statusTxt==&quot;error&quot;)</span><br><span class="line">      alert(&quot;Error: &quot;+xhr.status+&quot;: &quot;+xhr.statusText);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>��������ӻ���ļ�”demo_test.txt”�����ݼ��ص�ָ����divԪ���С�</p>
-<p>�ο���ҳ��<a href="http://www.w3school.com.cn/jquery/index.asp" target="_blank" rel="noopener">W3school jQuery�̳�</a></p>
+<p>下面的例子会把文件”demo_test.txt”的内容加载到指定的div元素中。</p>
+<p>参考网页：<a href="http://www.w3school.com.cn/jquery/index.asp" target="_blank" rel="noopener">W3school-jQuery教程</a></p>
 
           
         
