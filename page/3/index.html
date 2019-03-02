@@ -250,7 +250,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/02/18/HTML5总结/">
+    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/02/19/CSS3总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ligaoyan">
@@ -269,7 +269,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/18/HTML5总结/" itemprop="url">HTML5总结</a></h1>
+                <a class="post-title-link" href="/2019/02/19/CSS3总结/" itemprop="url">CSS3总结</a></h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T18:56:11+08:00">
-                2019-02-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-19T22:24:36+08:00">
+                2019-02-19
               </time>
             
 
@@ -304,8 +304,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -343,152 +343,98 @@
       
         
           
-            <h3 id="1-HTML5-浏览器支持"><a href="#1-HTML5-浏览器支持" class="headerlink" title="1.HTML5 浏览器支持"></a>1.HTML5 浏览器支持</h3><p>最新版本的 Safari、Chrome、Firefox 以及 Opera 支持某些 HTML5 特性。Internet Explorer 9 将支持某些 HTML5 特性。<br>IE9 以下版本浏览器兼容HTML5的方法，使用本站的静态资源的html5shiv包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--[if lt IE 9]&gt;</span><br><span class="line">    &lt;script src=&quot;http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;![endif]--&gt;</span><br></pre></td></tr></table></figure></p>
-<p>载入后，初始化新标签的CSS：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/*html5*/</span><br><span class="line">article,aside,dialog,footer,header,section,nav,figure,menu&#123;display:block&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-HTML5-视频"><a href="#2-HTML5-视频" class="headerlink" title="2.HTML5 视频"></a>2.HTML5 视频</h3><p>HTML5 规定了一种通过 video 元素来包含视频的标准方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;movie.ogg&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">Your browser does not support the video tag.  // 供不支持video元素的浏览器显示</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure></p>
-<p>当前，video 元素支持三种视频格式，如下表所示：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">格式</th>
-<th style="text-align:center">IE</th>
-<th style="text-align:center">Firefox</th>
-<th style="text-align:center">Opera</th>
-<th style="text-align:center">Chrome</th>
-<th style="text-align:center">Safari</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Ogg</td>
-<td style="text-align:center">/</td>
-<td style="text-align:center">3.5+</td>
-<td style="text-align:center">10.5+</td>
-<td style="text-align:center">5.0+</td>
-<td style="text-align:center">/</td>
-</tr>
-<tr>
-<td style="text-align:center">MPEG4</td>
-<td style="text-align:center">9.0+</td>
-<td style="text-align:center">/</td>
-<td style="text-align:center">/</td>
-<td style="text-align:center">5.0+</td>
-<td style="text-align:center">3.0+</td>
-</tr>
-<tr>
-<td style="text-align:center">WebM</td>
-<td style="text-align:center">/</td>
-<td style="text-align:center">4.0+</td>
-<td style="text-align:center">10.6+</td>
-<td style="text-align:center">6.0+</td>
-<td style="text-align:center">/</td>
-</tr>
-</tbody>
-</table>
-<p>video元素允许多个source元素。source元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;video width=<span class="string">"320"</span> height=<span class="string">"240"</span> controls=<span class="string">"controls"</span>&gt;</span><br><span class="line">  &lt;source src=<span class="string">"movie.ogg"</span> type=<span class="string">"video/ogg"</span>&gt;</span><br><span class="line">  &lt;source src=<span class="string">"movie.mp4"</span> type=<span class="string">"video/mp4"</span>&gt;</span><br><span class="line">Your browser does not support the video tag.</span><br><span class="line">&lt;<span class="regexp">/video&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>video标签的属性:</p>
-<ul>
-<li>autoplay=”autoplay” 视频在就绪后马上播放。</li>
-<li>controls=”controls” 向用户显示控件，比如播放按钮。</li>
-<li>loop=”loop” 则循环播放。</li>
-<li>preload=”load” 当页面加载后载入整个视频,如果使用 “autoplay”，则忽略该属性。</li>
-</ul>
-<h3 id="3-HTML5-音频"><a href="#3-HTML5-音频" class="headerlink" title="3.HTML5 音频"></a>3.HTML5 音频</h3><p>HTML5 规定了一种通过 audio 元素来包含音频的标准方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio controls=&quot;controls&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;song.ogg&quot; type=&quot;audio/ogg&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;song.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</span><br><span class="line">Your browser does not support the audio tag. // 是供不支持audio元素的浏览器显示</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
-<p>当前，audio 元素支持三种音频格式：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">\</th>
-<th style="text-align:center">IE9</th>
-<th style="text-align:center">Firefox3.5</th>
-<th style="text-align:center">Opera10.5</th>
-<th style="text-align:center">Chrome3.0</th>
-<th style="text-align:center">Safari3.0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Ogg Vorbis</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">o</td>
-<td style="text-align:center">o</td>
-<td style="text-align:center">o</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">MP3</td>
-<td style="text-align:center">o</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">o</td>
-<td style="text-align:center">o</td>
-</tr>
-<tr>
-<td style="text-align:center">Wav</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">o</td>
-<td style="text-align:center">o</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">o</td>
-</tr>
-</tbody>
-</table>
-<p>audio标签的属性：</p>
-<ul>
-<li>autoplay=”autoplay” 视频在就绪后马上播放。</li>
-<li>controls=”controls” 向用户显示控件，比如播放按钮。</li>
-<li>loop=”loop” 则循环播放。</li>
-<li>preload=”load” 当页面加载后载入整个视频,如果使用 “autoplay”，则忽略该属性。</li>
-</ul>
-<h3 id="4-HTML5-拖放"><a href="#4-HTML5-拖放" class="headerlink" title="4.HTML5 拖放"></a>4.HTML5 拖放</h3><p>在 HTML5 中，拖放是标准的一部分，任何元素都能够拖放。拖放是一种常见的特性，即抓取对象以后拖到另一个位置。<br>浏览器支持：Internet Explorer 9、Firefox、Opera 12、Chrome 以及 Safari 5 支持拖放。（在 Safari 5.1.2 中不支持拖放。）</p>
-<h3 id="5-HTML5-画布"><a href="#5-HTML5-画布" class="headerlink" title="5.HTML5 画布"></a>5.HTML5 画布</h3><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。<br>向 HTML5 页面添加 canvas 元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure></p>
-<p>W3C上的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;  </span><br><span class="line">var c=document.getElementById(&quot;myCanvas&quot;);  // 使用id寻找canvas元素 </span><br><span class="line">var cxt=c.getContext(&quot;2d&quot;);  // 创建context对象</span><br><span class="line">cxt.fillStyle=&quot;#FF0000&quot;;  // 绘制对象为红色</span><br><span class="line">cxt.fillRect(0,0,150,75);  // 绘制一个矩形</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="6-HTML5-SVG"><a href="#6-HTML5-SVG" class="headerlink" title="6.HTML5 SVG"></a>6.HTML5 SVG</h3><p>SVG指可伸缩矢量图形,SVG用于定义用于网络的基于矢量的图形，SVG图像在放大或改变尺寸的情况下其图形质量不会有损失。<br>将 SVG 元素直接嵌入 HTML 页面中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; height=&quot;190&quot;&gt;</span><br><span class="line">  &lt;polygon points=&quot;100,10 40,180 190,60 10,60 160,180&quot;</span><br><span class="line">  style=&quot;fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;&quot; /&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure></p>
-<p>结果将在页面上绘制一个五角星，详细看W3C教程。</p>
-<h3 id="7-HTML5-表单"><a href="#7-HTML5-表单" class="headerlink" title="7.HTML5 表单"></a>7.HTML5 表单</h3><ol>
-<li>HTML5新的input类型</li>
+            <h3 id="1-CSS3-模块"><a href="#1-CSS3-模块" class="headerlink" title="1.CSS3 模块"></a>1.CSS3 模块</h3><p>CSS3语言开发是朝着模块化发展的，其中重要的CSS3模块包括：选择器、框模型、背景和边框、文本效果、2D/3D 转换、动画、多列布局、用户界面</p>
+<h3 id="2-CSS3-边框"><a href="#2-CSS3-边框" class="headerlink" title="2.CSS3 边框"></a>2.CSS3 边框</h3><ol>
+<li><p>border-radius 圆角边框</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    border:2px solid;</span><br><span class="line">    border-radius:25px;</span><br><span class="line">    -moz-border-radius:25px; /* Old Firefox */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>box-shadow 边框阴影</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div &#123;box-shadow: 10px 10px 5px #888888;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>border-image 边框图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    border-image:url(border.png) 30 30 round;</span><br><span class="line">    -moz-border-image:url(border.png) 30 30 round; /* 老的 Firefox */</span><br><span class="line">    -webkit-border-image:url(border.png) 30 30 round; /* Safari 和 Chrome */</span><br><span class="line">    -o-border-image:url(border.png) 30 30 round; /* Opera */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<h3 id="3-CSS3-背景"><a href="#3-CSS3-背景" class="headerlink" title="3.CSS3 背景"></a>3.CSS3 背景</h3><ol>
+<li><p>background-size</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    background:url(bg_flower.gif);</span><br><span class="line">    -moz-background-size:63px 100px; /* 老版本的 Firefox */</span><br><span class="line">    background-size:63px 100px;</span><br><span class="line">    background-repeat:no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>background-origin<br>背景图片可以放置于 content-box、padding-box 或 border-box 区域。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    background:url(bg_flower.gif);</span><br><span class="line">    background-repeat:no-repeat;</span><br><span class="line">    background-size:100% 100%;</span><br><span class="line">    -webkit-background-origin:content-box; /* Safari */</span><br><span class="line">    background-origin:content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多背景图片<br>CSS3 允许您为元素使用多个背景图像。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123; </span><br><span class="line">    background-image:url(bg_flower.gif),url(bg_flower_2.gif);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="4-CSS3-文本效果"><a href="#4-CSS3-文本效果" class="headerlink" title="4. CSS3 文本效果"></a>4. CSS3 文本效果</h3><ol>
+<li><p>text-shadow 文本阴影</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;text-shadow: 5px 5px 5px #FF0000;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>word-wrap 自动换行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123;word-wrap:break-word;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="5-CSS3-字体"><a href="#5-CSS3-字体" class="headerlink" title="5.CSS3 字体"></a>5.CSS3 字体</h3><p>在 CSS3 之前，web 设计师必须使用已在用户计算机上安装好的字体。通过 CSS3，web 设计师可以使用他们喜欢的任意字体，将该字体文件存放到web服务器上，它会在需要时被自动下载到用户的计算机上。您“自己的”的字体是在CSS3 @font-face 规则中定义的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt; </span><br><span class="line">@font-face &#123;</span><br><span class="line">    font-family: myFirstFont;</span><br><span class="line">    src: url(&apos;Sansation_Light.ttf&apos;),</span><br><span class="line">         url(&apos;Sansation_Light.eot&apos;); /* IE9+ */</span><br><span class="line">&#125;</span><br><span class="line">div &#123;font-family:myFirstFont;&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在新的@font-face规则中,您必须首先定义字体的名称（比如myFirstFont），然后指向该字体文件。</p>
+<h3 id="6-CSS3-2D-转换"><a href="#6-CSS3-2D-转换" class="headerlink" title="6.CSS3 2D 转换"></a>6.CSS3 2D 转换</h3><p>通过 CSS3 转换，我们能够对元素进行移动、缩放、转动、拉长或拉伸。<br>Internet Explorer 10、Firefox 以及 Opera 支持 transform 属性。<br>Chrome 和 Safari 需要前缀 -webkit-，Internet Explorer 9 需要前缀 -ms-。<br>2D Transform 方法函数描述：</p>
 <ul>
-<li>email</li>
-<li>url</li>
-<li>number</li>
-<li>range</li>
-<li>Date pickers (data,month,week,time,datetime,datetime-local)</li>
-<li>search</li>
-<li>color<br>Opera 对新的输入类型的支持最好。不过您已经可以在所有主流的浏览器中使用它们了。即使不被支持，仍然可以显示为常规的文本域。<br>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E-mail: &lt;input type=&quot;email&quot; name=&quot;user_email&quot; /&gt;</span><br><span class="line">Homepage: &lt;input type=&quot;url&quot; name=&quot;user_url&quot; /&gt;</span><br><span class="line">Points: &lt;input type=&quot;number&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<li>matrix(n,n,n,n,n,n)    定义 2D 转换，使用六个值的矩阵。</li>
+<li>translate(x,y)    定义 2D 转换，沿着 X 和 Y 轴移动元素。</li>
+<li>translateX(n)    定义 2D 转换，沿着 X 轴移动元素。</li>
+<li>translateY(n)    定义 2D 转换，沿着 Y 轴移动元素。</li>
+<li>scale(x,y)    定义 2D 缩放转换，改变元素的宽度和高度。</li>
+<li>scaleX(n)    定义 2D 缩放转换，改变元素的宽度。</li>
+<li>scaleY(n)    定义 2D 缩放转换，改变元素的高度。</li>
+<li>rotate(angle)    定义 2D 旋转，在参数中规定角度。</li>
+<li>skew(x-angle,y-angle)    定义 2D 倾斜转换，沿着 X 和 Y 轴。</li>
+<li>skewX(angle)    定义 2D 倾斜转换，沿着 X 轴。</li>
+<li>skewY(angle)    定义 2D 倾斜转换，沿着 Y 轴。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    transform: rotate(30deg);</span><br><span class="line">    -ms-transform: rotate(30deg);		/* IE 9 */</span><br><span class="line">    -webkit-transform: rotate(30deg);	/* Safari and Chrome */</span><br><span class="line">    -o-transform: rotate(30deg);		/* Opera */</span><br><span class="line">    -moz-transform: rotate(30deg);		/* Firefox */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol start="2">
-<li>HTML5 的新的表单元素：</li>
-</ol>
+<h3 id="7-CSS3-3D-转换"><a href="#7-CSS3-3D-转换" class="headerlink" title="7.CSS3 3D 转换"></a>7.CSS3 3D 转换</h3><p>Internet Explorer 10 和 Firefox 支持 3D 转换。<br>Chrome 和 Safari 需要前缀 -webkit-。Opera 仍然不支持 3D 转换。<br>2D Transform 方法：</p>
 <ul>
-<li>datalist</li>
-<li>keygen</li>
-<li>output<br>datalist元素规定输入域的选项列表。列表是通过datalist内的option元素创建的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Webpage: &lt;input type=&quot;url&quot; list=&quot;url_list&quot; name=&quot;link&quot; /&gt;</span><br><span class="line">&lt;datalist id=&quot;url_list&quot;&gt;</span><br><span class="line">&lt;option label=&quot;W3School&quot; value=&quot;http://www.W3School.com.cn&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Google&quot; value=&quot;http://www.google.com&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Microsoft&quot; value=&quot;http://www.microsoft.com&quot; /&gt;</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
+<li>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)    定义3D转换，使用16个值的4x4矩阵。</li>
+<li>translate3d(x,y,z)    定义 3D 转化。</li>
+<li>translateX(x)    定义 3D 转化，仅使用用于 X 轴的值。</li>
+<li>translateY(y)    定义 3D 转化，仅使用用于 Y 轴的值。</li>
+<li>translateZ(z)    定义 3D 转化，仅使用用于 Z 轴的值。</li>
+<li>scale3d(x,y,z)    定义 3D 缩放转换。</li>
+<li>scaleX(x)    定义 3D 缩放转换，通过给定一个 X 轴的值。</li>
+<li>scaleY(y)    定义 3D 缩放转换，通过给定一个 Y 轴的值。</li>
+<li>scaleZ(z)    定义 3D 缩放转换，通过给定一个 Z 轴的值。</li>
+<li>rotate3d(x,y,z,angle)    定义 3D 旋转。</li>
+<li>rotateX(angle)    定义沿 X 轴的 3D 旋转。</li>
+<li>rotateY(angle)    定义沿 Y 轴的 3D 旋转。</li>
+<li>rotateZ(angle)    定义沿 Z 轴的 3D 旋转。</li>
+<li>perspective(n)    定义 3D 转换元素的透视视图<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    transform: rotateX(120deg);</span><br><span class="line">    -webkit-transform: rotateX(120deg);	/* Safari 和 Chrome */</span><br><span class="line">    -moz-transform: rotateX(120deg);	/* Firefox */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>keygen 元素的作用是提供一种验证用户的可靠方法,但是浏览器支持不好。<br>output 元素用于不同类型的输出，比如计算或脚本输出。</p>
-<ol start="3">
-<li>HTML5 的新的表单属性<br>新的 form 属性：</li>
+<h3 id="8-CSS3-过度"><a href="#8-CSS3-过度" class="headerlink" title="8.CSS3 过度"></a>8.CSS3 过度</h3><p>通过 CSS3，我们可以在不使用Flash动画或JavaScript的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。<br>Internet Explorer10、Firefox、Chrome以及Opera支持transition属性。Safari需要前缀-webkit-。Internet Explorer9以及更早的版本，不支持transition属性。Chrome25以及更早的版本，需要前缀-webkit-。<br>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;width:300px;&#125;</span><br><span class="line"></span><br><span class="line">div &#123;</span><br><span class="line">    transition: width 2s;</span><br><span class="line">    -moz-transition: width 2s;	/* Firefox 4 */</span><br><span class="line">    -webkit-transition: width 2s;	/* Safari 和 Chrome */</span><br><span class="line">    -o-transition: width 2s;	/* Opera */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="9-CSS3-动画"><a href="#9-CSS3-动画" class="headerlink" title="9.CSS3 动画"></a>9.CSS3 动画</h3><p>通过CSS3，我们能够创建动画，这可以在许多网页中取代动画图片、Flash动画以及JavaScript。<br>@keyframes规则用于创建动画。Internet Explorer 10、Firefox以及Opera支持@keyframes规则和animation属性。Chrome和Safari需要前缀-webkit-。Internet Explorer 9，以及更早的版本，不支持@keyframe规则或 animation属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style&gt; </span><br><span class="line">div</span><br><span class="line">&#123;</span><br><span class="line">width:100px;</span><br><span class="line">height:100px;</span><br><span class="line">background:red;</span><br><span class="line">animation:myfirst 5s;</span><br><span class="line">-moz-animation:myfirst 5s; /* Firefox */</span><br><span class="line">-webkit-animation:myfirst 5s; /* Safari and Chrome */</span><br><span class="line">-o-animation:myfirst 5s; /* Opera */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes myfirst</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red;&#125;</span><br><span class="line">25%  &#123;background:yellow;&#125;</span><br><span class="line">50%  &#123;background:blue;&#125;</span><br><span class="line">100% &#123;background:green;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@-moz-keyframes myfirst /* Firefox */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red;&#125;</span><br><span class="line">25%  &#123;background:yellow;&#125;</span><br><span class="line">50%  &#123;background:blue;&#125;</span><br><span class="line">100% &#123;background:green;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@-webkit-keyframes myfirst /* Safari and Chrome */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red;&#125;</span><br><span class="line">25%  &#123;background:yellow;&#125;</span><br><span class="line">50%  &#123;background:blue;&#125;</span><br><span class="line">100% &#123;background:green;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@-o-keyframes myfirst /* Opera */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red;&#125;</span><br><span class="line">25%  &#123;background:yellow;&#125;</span><br><span class="line">50%  &#123;background:blue;&#125;</span><br><span class="line">100% &#123;background:green;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="10-CSS3-多列"><a href="#10-CSS3-多列" class="headerlink" title="10.CSS3 多列"></a>10.CSS3 多列</h3><p>Internet Explorer 10 和 Opera 支持多列属性。Firefox 需要前缀 -moz-。Chrome 和 Safari 需要前缀 -webkit-。Internet Explorer 9以及更早的版本不支持多列属性。</p>
+<ol>
+<li><p>column-count 属性规定元素应该被分隔的列数： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    -moz-column-count:3; 	/* Firefox */</span><br><span class="line">    -webkit-column-count:3; /* Safari 和 Chrome */</span><br><span class="line">    column-count:3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>column-gap 属性规定列之间的间隔：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    -moz-column-gap:40px;		/* Firefox */</span><br><span class="line">    -webkit-column-gap:40px;	/* Safari 和 Chrome */</span><br><span class="line">    column-gap:40px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>column-rule 属性设置列之间的宽度、样式和颜色规则。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    -moz-column-rule:3px outset #ff0000;	/* Firefox */</span><br><span class="line">    -webkit-column-rule:3px outset #ff0000;	/* Safari and Chrome */</span><br><span class="line">    column-rule:3px outset #ff0000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<ul>
-<li>autocomplete</li>
-<li>novalidate<br>新的 input 属性：</li>
-<li>autocomplete</li>
-<li>autofocus</li>
-<li>form</li>
-<li>form overrides (formaction, formenctype, formmethod, formnovalidate, formtarget)</li>
-<li>height 和 width</li>
-<li>list</li>
-<li>min, max, step</li>
-<li>multiple</li>
-<li>pattern (regexp)</li>
-<li>placeholder</li>
-<li>required</li>
-</ul>
-<p>autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。<br>autocomplete 适用于form标签，以及以下类型的input标签：text, search, url, telephone, email, password, datepickers, range 以及 color。<br>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;demo_form.asp&quot; method=&quot;get&quot; autocomplete=&quot;on&quot;&gt;</span><br><span class="line">First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;br /&gt;</span><br><span class="line">Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;br /&gt;</span><br><span class="line">E-mail: &lt;input type=&quot;email&quot; name=&quot;email&quot; autocomplete=&quot;off&quot; /&gt;&lt;br /&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; /&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
-<p>height 和 width 属性规定用于 image 类型的 input 标签的图像高度和宽度。</p>
-<p>参考网页：<br><a href="http://www.w3school.com.cn/html5/index.asp" target="_blank" rel="noopener">W3school-HTML5教程</a></p>
+<h3 id="11-CSS3-用户界面"><a href="#11-CSS3-用户界面" class="headerlink" title="11.CSS3 用户界面"></a>11.CSS3 用户界面</h3><ol>
+<li><p>resize 属性规定是否可由用户调整元素尺寸<br>Firefox、Chrome 以及 Safari 支持 resize 属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    resize:both;</span><br><span class="line">    overflow:auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>box-sizing 属性允许您以确切的方式定义适应某个区域的具体内容。<br>Internet Explorer、Chrome、Safari 以及 Opera 支持 box-sizing 属性。Firefox 需要前缀 -moz-。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    box-sizing:border-box;</span><br><span class="line">    -moz-box-sizing:border-box;	/* Firefox */</span><br><span class="line">    -webkit-box-sizing:border-box;	/* Safari */</span><br><span class="line">    width:50%;</span><br><span class="line">    float:left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。<br>所有主流浏览器都支持 outline-offset 属性，除了 Internet Explorer。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    border:2px solid black;</span><br><span class="line">    outline:2px solid red;</span><br><span class="line">    outline-offset:15px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>参考网页：<br><a href="http://www.w3school.com.cn/css3/index.asp" target="_blank" rel="noopener">W3school-CSS3教程</a></p>
 
           
         
@@ -528,7 +474,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -578,7 +524,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -589,7 +535,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
