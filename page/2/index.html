@@ -250,7 +250,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/02/21/HTTP总结/">
+    <link itemprop="mainEntityOfPage" href="http://ligaoyan.github.io/2019/02/24/jQuery/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ligaoyan">
@@ -269,7 +269,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/21/HTTP总结/" itemprop="url">HTTP总结</a></h1>
+                <a class="post-title-link" href="/2019/02/24/jQuery/" itemprop="url">jQuery</a></h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-21T22:05:55+08:00">
-                2019-02-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T21:05:55+08:00">
+                2019-02-24
               </time>
             
 
@@ -304,8 +304,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTTP/" itemprop="url" rel="index">
-                    <span itemprop="name">HTTP</span>
+                  <a href="/categories/jQuery/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery</span>
                   </a>
                 </span>
 
@@ -343,94 +343,147 @@
       
         
           
-            <h3 id="1-TCP-IP协议族"><a href="#1-TCP-IP协议族" class="headerlink" title="1.TCP/IP协议族"></a>1.TCP/IP协议族</h3><ul>
-<li>把互联网相关联的协议集合起来总称TCP/IP。</li>
-<li>HTTP基于TCP/IP协议族，HTTP属于它内部的一个子集。</li>
-</ul>
-<ol>
-<li>TCP/IP分层管理<br>TCP/IP按层次分为：应用层，传输层，网络层和链路层。</li>
+            <h3 id="1-jQuery-安装"><a href="#1-jQuery-安装" class="headerlink" title="1.jQuery 安装"></a>1.jQuery 安装</h3><p>jQuery库是一个JavaScript文件，可以使用HTML的script标签引用它：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-jQuery-选择器"><a href="#2-jQuery-选择器" class="headerlink" title="2.jQuery 选择器"></a>2.jQuery 选择器</h3><ol>
+<li>jQuery 元素选择器</li>
 </ol>
 <ul>
-<li>应用层：决定了向用户提供应用服务时通信的活动。<br>FTP（文件传输协议），DNS（域名系统），HTTP（超文本传输协议）</li>
-<li>传输层：提供处于网络连接中的两台计算机之间的数据传输。<br>TCP（传输控制协议），UDP（用户数据报协议）</li>
-<li>网络层（网络互联层）：用来处理网络上流动的数据包。数据包是网络传输的最小单位。该层规定了通过怎样的路径到达对方计算机，并把数据包传送给对方。</li>
-<li>链路层（网络接口层）：用来处理连接网络的硬件部分。包括控制操作系统、硬件的设备驱动、NIC（网卡）以及光纤等物理可见部分。</li>
+<li>$(“p”) 选取p元素。</li>
+<li>$(“p.intro”) 选取所有 class=”intro” 的p元素。</li>
+<li>$(“p#demo”) 选取所有 id=”demo” 的p元素。</li>
 </ul>
 <ol start="2">
-<li>TCP/IP通信传输流<br>发送端在层与层之间传输数据时，每经过一层必定会被打上一个该层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层时会把对应的首部消去。<br>这种把数据信息包装起来的做法称为封装。如下图所示。<br><img src="/2019/02/21/HTTP总结/chuanshu.png" alt="TCP/IP通信传输流"></li>
-<li>与HTTP关系密切的协议：IP、TCP和DNS</li>
+<li>jQuery 属性选择器</li>
 </ol>
 <ul>
-<li>IP协议的作用是将数据包传输给对方，两个重要条件：IP地址和MAC地址。IP地址指明了节点被分配到到地址，MAC地址是指网卡所属固定地址。在网络上，通常要经过多台计算机和网络设备中转才能连接到对方，可以利用中转设备的MAC地址搜索下一个中转目标。</li>
-<li>TCP协议提供可靠的字节流服务，TCP协议为了更容易传送大数据而把数据分隔，而且TCP协议能够确认数据是否送达对方。<br>为了准确无误地将数据送达目的，TCP协议采用了三次握手策略。握手过程中使用了TCP的标志–SYN和ACK。发送端首先发送一个带有SYN标志的数据包给对方。接收端收到后，回传一个带有SYN/ACK标志的数据包以示传达确认信息。最后，发送方再回传一个带ACK标志的数据包，代表“握手”结束。</li>
-<li>DNS服务和HTTP协议一样位于应用层的协议，提供域名到IP地址之间的解析服务。<br><img src="/2019/02/21/HTTP总结/xieyi.png" alt="各种协议与HTTP的关系"></li>
-</ul>
-<ol start="4">
-<li>URI<br>URI就是由某个协议方案表示的资源的定位标识符。采用HTTP协议时，协议方案就是http。<br>URI的格式如下图所示：<br><img src="/2019/02/21/HTTP总结/URI.png" alt="URI的格式"></li>
-</ol>
-<h3 id="2-简单的HTTP协议（1-1）"><a href="#2-简单的HTTP协议（1-1）" class="headerlink" title="2.简单的HTTP协议（1.1）"></a>2.简单的HTTP协议（1.1）</h3><p>请求访问文本等资源的一端称为客户端，而提供资源的一端称为服务端。肯定从客户端开始建立通信，服务端在没有接收到请求之前不会发出响应。</p>
-<ul>
-<li>请求报文是由请求方法，请求URI，协议版本，可选的请求首部字段和内容实体构成。<br><img src="/2019/02/21/HTTP总结/qingqiu.png" alt="请求报文"></li>
-<li>响应报文基本上由协议版本，状态码，解释状态码的原因短语，可选的响应首部字段以及实体主体构成。<br><img src="/2019/02/21/HTTP总结/xiangying.png" alt="响应报文"></li>
-</ul>
-<ol>
-<li>HTTP是不保存状态的协议<br>协议本身不保留之前一切的请求和响应报文的信息，这是为了更快地处理大量食物，确保协议的可伸缩性，而特意把HTTP协议设计成如此简单。但是假如用户登陆了某界面，需要保存用户登陆过这个事实该怎么办？于是引入了Cookie技术。于是乎就可以管理状态了。</li>
-<li>告知服务器意图的HTTP方法</li>
-</ol>
-<ul>
-<li>GET：获取资源，如果为资源则保持原样返回，如果为程序则返回程序执行后的结果。</li>
-<li>POST：传输实体主体</li>
-<li>PUT：用来传输文件，要求在请求报文的主体中包含文件内容，然后保存到请求URI指定的位置。（自身不带验证机制，存在安全问题，一般不使用该方法）</li>
-<li>HEAD：与GET方法类似，只是不返回报文主体部分。用于确认URI的有效性及资源更新的日期时间等。</li>
-<li>DELETE：与put相反，表示删除某资源，一般不适用。</li>
-<li>OPTIONS：询问支持的方法。</li>
-<li>TRACE：追踪路径，将web服务器之前等请求通信环给客户端的方法。（不常用）</li>
-<li>CONNECT：要求用隧道协议连接代理，实现用隧道协议进行TCP通信。（使用SSL和TLS）</li>
+<li>$(“[href]”) 选取所有带有 href 属性的元素。</li>
+<li>$(“[href=’#’]”) 选取所有带有 href 值等于”#”的元素。</li>
+<li>$(“[href!=’#’]”) 选取所有带有 href 值不等于”#”的元素。</li>
+<li>$(“[href$=’.jpg’]”) 选取所有 hrefn值以”.jpg”结尾的元素。</li>
 </ul>
 <ol start="3">
-<li>持续连接节省通信量<br>传统每请求一次就要三次握手连接tcp四次握手断开，但是原来传输量特别小，所以影响不大，但是当下一个html可能包含n多图片，会造成过多无谓大通信量。</li>
+<li>jQuery CSS 选择器<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).css(&quot;background-color&quot;,&quot;red&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="3-jQuery-效果"><a href="#3-jQuery-效果" class="headerlink" title="3.jQuery 效果"></a>3.jQuery 效果</h3><ol>
+<li>隐藏和显示<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(selector).hide(speed,callback);</span><br><span class="line">$(selector).show(speed,callback);</span><br><span class="line">$(selector).toggle(speed,callback); // 切换hide()和show()方法</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>可选的speed参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast”或毫秒。<br>可选的callback参数是隐藏或显示完成后所执行的函数名称。</p>
+<ol start="2">
+<li><p>淡入淡出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div2&quot;).fadeIn(&quot;slow&quot;); // 淡入</span><br><span class="line">$(&quot;#div3&quot;).fadeOut(3000); // 淡出</span><br><span class="line">$(&quot;#div3&quot;).fadeToggle(3000);</span><br><span class="line">$(selector).fadeTo(speed,opacity,callback); // 必需的speed参数规定效果时长</span><br><span class="line"> // 必需的opacity参数将淡入淡出效果设置为给定的不透明度（值介于0与1之间）。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>滑动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(selector).slideDown(speed,callback);</span><br><span class="line">$(selector).slideUp(speed,callback);</span><br><span class="line">$(selector).slideToggle(speed,callback);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动画<br>jQuery animate() 方法用于创建自定义动画。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).animate(&#123;params&#125;,speed,callback);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>必需的 params 参数定义形成动画的 CSS 属性。<br>speed,callback可选<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;div&quot;).animate(&#123;</span><br><span class="line">    left:&apos;250px&apos;,</span><br><span class="line">    opacity:&apos;0.5&apos;,</span><br><span class="line">    height:&apos;150px&apos;,</span><br><span class="line">    width:&apos;150px&apos;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<ol start="5">
+<li><p>停止动画</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#stop&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;#panel&quot;).stop();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>jQuery Chaining<br>jQuery允许我们在相同的元素上运行多条jQuery命令，一条接着另一条</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#p1&quot;).css(&quot;color&quot;,&quot;red&quot;).slideUp(2000).slideDown(2000);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="4-jQuery-HTML"><a href="#4-jQuery-HTML" class="headerlink" title="4.jQuery HTML"></a>4.jQuery HTML</h3><ol>
+<li>text()、html()、val()以及attr()<br>获取：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert(&quot;Text: &quot; + $(&quot;#test&quot;).text()); // 获得内容</span><br><span class="line">alert(&quot;HTML: &quot; + $(&quot;#test&quot;).html()); // 获得内容</span><br><span class="line">alert(&quot;Value: &quot; + $(&quot;#test&quot;).val()); // 获得输入字段的值</span><br><span class="line">alert($(&quot;#w3s&quot;).attr(&quot;href&quot;)); // 获取属性值</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#test1&quot;).text(&quot;Hello world!&quot;); // </span><br><span class="line">$(&quot;#test2&quot;).html(&quot;&lt;b&gt;Hello world!&lt;/b&gt;&quot;); // </span><br><span class="line">$(&quot;#test3&quot;).val(&quot;Dolly Duck&quot;); // </span><br><span class="line">$(&quot;#w3s&quot;).attr(&quot;href&quot;,&quot;http://www.w3school.com.cn/jquery&quot;); // 设置href属性的值</span><br></pre></td></tr></table></figure></p>
+<p>text()、html() 以及 val() 的回调函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#test1&quot;).text(function(i,origText)&#123;</span><br><span class="line">    return &quot;Old text: &quot; + origText + &quot; New text: Hello world!</span><br><span class="line">    (index: &quot; + i + &quot;)&quot;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
+<ol start="2">
+<li>jQuery添加元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">append() - 在被选元素的结尾插入内容</span><br><span class="line">prepend() - 在被选元素的开头插入内容</span><br><span class="line">$(&quot;img&quot;).after(&quot;Some text after&quot;); // 被选元素之后插入</span><br><span class="line">$(&quot;img&quot;).before(&quot;Some text before&quot;); // 被选元素之前插入</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>添加多个元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function appendText()</span><br><span class="line">&#123;</span><br><span class="line">var txt1=&quot;&lt;p&gt;Text.&lt;/p&gt;&quot;;               // 以 HTML 创建新元素</span><br><span class="line">var txt2=$(&quot;&lt;p&gt;&lt;/p&gt;&quot;).text(&quot;Text.&quot;);   // 以 jQuery 创建新元素</span><br><span class="line">var txt3=document.createElement(&quot;p&quot;);  // 以 DOM 创建新元素</span><br><span class="line">txt3.innerHTML=&quot;Text.&quot;;</span><br><span class="line">$(&quot;p&quot;).append(txt1,txt2,txt3);         // 追加新元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>jQuery 删除元素</li>
 </ol>
 <ul>
-<li>持久连接：只要任意一段没有明确提出断开连接，则保持TCP连接。HTTP1.1默认所有连接都是持久连接。</li>
-<li>管线化：曾经是发送请求后需要等待并收到响应，才会发送下一个请求。管线化技术不用等待响应亦可直接发送下一个请求。可以让更多请求更快结束。（速度快很多）</li>
+<li>remove() - 删除被选元素（及其子元素）</li>
+<li>empty() - 从被选元素中删除子元素</li>
 </ul>
 <ol start="4">
-<li>使用Cookie的状态管理<br>如果让服务器管理全部客户端状态会成为负担。故引入Cookie技术解决该矛盾：Cookie会根据从服务端发送的响应报文中一个叫做set-Cookie的首部字段信息，通知客户端保存Cookie。当下次客户端再往该服务器发送请求时，客户端会自动在请求报文中加入Cookie的值发送出去。<br>服务器发现客户端发送过来的Cookie后，会去检查究竟是从哪一个客户端发来的连接请求，然后对比服务器上的纪录，得到最终状态信息。</li>
-</ol>
-<h3 id="3-返回结果的HTTP状态码"><a href="#3-返回结果的HTTP状态码" class="headerlink" title="3.返回结果的HTTP状态码"></a>3.返回结果的HTTP状态码</h3><p>状态码的类别：<br><img src="/2019/02/21/HTTP总结/zhuangtai.png" alt="状态码的类别"></p>
-<h3 id="4-与HTTP协作的Web服务器"><a href="#4-与HTTP协作的Web服务器" class="headerlink" title="4.与HTTP协作的Web服务器"></a>4.与HTTP协作的Web服务器</h3><ol>
-<li>用单台虚拟主机实现多个域名<br>HTTP/1.1允许一台HTTP服务器搭建多个Web站点，即物理层面只有一台服务器，但只要使用虚拟主机的功能，则可以假想已具有多台服务器。<br>相同IP下，由于虚拟主机可以寄存多个不同主机名或域名的Web网站，因此在发送HTTP请求时，必须在Host首部内完整指定主机名或者域名的URI。</li>
-<li>通信数据转发程序：代理、网关、隧道</li>
+<li>jQuery操作CSS</li>
 </ol>
 <ul>
-<li>代理：接收客户端请求并转发给服务器，同时也接收服务器返回的响应再转发给客户端。</li>
-<li>网关：网关是转发其他服务器通信数据的服务器，接收从客户端发送来的请求时，它就像自己拥有资源的服务器一样对请求进行处理，客户端自身可能察觉不到。</li>
-<li>隧道：隧道是在相隔甚远的客户端和服务器两者之间进行中转，保持双方通信连接的应用程序。</li>
+<li>addClass() - 向被选元素添加一个或多个类</li>
+<li>removeClass() - 从被选元素删除一个或多个类</li>
+<li>toggleClass() - 对被选元素进行添加/删除类的切换操作</li>
+<li>css() - 设置或返回样式属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;h1,h2,p&quot;).addClass(&quot;blue&quot;);</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<ol start="3">
-<li>保存资源的缓存<br>缓存指代理服务器或客户端本地磁盘内保存的资源副本。利用缓存可减少对源服务器的访问。</li>
-</ol>
-<h3 id="5-确保Web安全的HTTPS"><a href="#5-确保Web安全的HTTPS" class="headerlink" title="5.确保Web安全的HTTPS"></a>5.确保Web安全的HTTPS</h3><ol>
-<li>HTTP缺点</li>
+<ol start="5">
+<li><p>jQuery css()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).css(&quot;background-color&quot;); // 返回首个匹配元素的background-color值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>jQuery 尺寸</p>
+</li>
 </ol>
 <ul>
-<li>通信使用明文，内容可能被窃听</li>
-<li>不验证通信方身份，因此可能遭遇伪装（不能验证真正的拥有资源方和真正的提出请求方）</li>
-<li>无法证明报文的完整性，所以有可能已遭篡改</li>
+<li>width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。</li>
+<li>height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。</li>
+<li>innerWidth() 方法返回元素的宽度（包括内边距）。</li>
+<li>innerHeight() 方法返回元素的高度（包括内边距）。</li>
+<li>outerWidth() 方法返回元素的宽度（包括内边距和边框）。</li>
+<li>outerHeight() 方法返回元素的高度（包括内边距和边框）。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div1&quot;).outerWidth()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="5-jQuery-遍历"><a href="#5-jQuery-遍历" class="headerlink" title="5.jQuery 遍历"></a>5.jQuery 遍历</h3><ol>
+<li>祖先</li>
+</ol>
+<ul>
+<li>parent() 方法返回被选元素的直接父元素。</li>
+<li>parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (html)。</li>
+<li>parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。</li>
 </ul>
 <ol start="2">
-<li>HTTP+加密+认证+完整性保护 = HTTPS<br>HTTPS是身披SSL外壳的HTTP。<br>SSL采用一种叫做公开密钥加密的加密处理方式。</li>
+<li>后代</li>
 </ol>
 <ul>
-<li>共享密钥加密的困境：加密解密用同一个密钥的方式称为共享密钥加密。</li>
-<li>使用两把密钥的公开密钥加密，使用一对非对称的密钥。一把叫做私有密钥，一把叫做公有密钥。发送密文的一方使用对方的公钥进行加密，接收方使用自己的私钥进行解密，利用这种方式，不需要发送用来解密的私有密钥。</li>
-<li>HTTPS采用混合加密机制：若密钥能够实现安全交换，那么有可能会考虑仅使用公开密钥加密来，但是公开密钥加密处理速度比共享密钥要慢。故：交换密钥环节使用公开密钥加密方式，之后建立通信交换报文阶段采用共享密钥加密。</li>
+<li>children() 方法返回被选元素的所有直接子元素。</li>
+<li>find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。</li>
 </ul>
 <ol start="3">
-<li>证明公开密钥正确性的证书<br><img src="/2019/02/21/HTTP总结/miyao.png" alt="密钥正确"></li>
-<li>https的安全通信机制<br><img src="/2019/02/21/HTTP总结/jizhi1.png" alt="https的安全通信机制"><br><img src="/2019/02/21/HTTP总结/jizhi2.png" alt="https的安全通信机制"></li>
+<li>同胞</li>
 </ol>
-<p>参考书籍：《图解HTTP》</p>
+<ul>
+<li>siblings() 方法返回被选元素的所有同胞元素。</li>
+<li>next() 方法返回被选元素的下一个同胞元素。</li>
+<li>nextAll() 方法返回被选元素的所有跟随的同胞元素。</li>
+<li>nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。</li>
+</ul>
+<ol start="4">
+<li>过滤</li>
+</ol>
+<ul>
+<li>first() 方法返回被选元素的首个元素。</li>
+<li>last() 方法返回被选元素的最后一个元素。</li>
+<li>eq() 方法返回被选元素中带有指定索引号的元素。</li>
+</ul>
+<h3 id="6-jQuery-AJAX"><a href="#6-jQuery-AJAX" class="headerlink" title="6.jQuery AJAX"></a>6.jQuery AJAX</h3><ol>
+<li>jQuery load() 方法是简单但强大的AJAX方法。load()方法从服务器加载数据，并把返回的数据放入被选元素中。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).load(URL,data,callback);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>必需的URL参数规定您希望加载的URL。可选的data参数规定与请求一同发送的查询字符串键/值对集合。可选的callback参数规定当load()方法完成后所要允许的回调函数。回调函数可以设置不同的参数： </p>
+<ul>
+<li>responseTxt - 包含调用成功时的结果内容</li>
+<li>statusTXT - 包含调用的状态</li>
+<li>xhr - 包含 XMLHttpRequest 对象<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;#div1&quot;).load(&quot;demo_test.txt&quot;,function(responseTxt,statusTxt,xhr)&#123;</span><br><span class="line">    if(statusTxt==&quot;success&quot;)</span><br><span class="line">      alert(&quot;外部内容加载成功！&quot;);</span><br><span class="line">    if(statusTxt==&quot;error&quot;)</span><br><span class="line">      alert(&quot;Error: &quot;+xhr.status+&quot;: &quot;+xhr.statusText);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上面的例子会把文件”demo_test.txt”的内容加载到指定的div元素中。</p>
+<ol start="2">
+<li>$.get() 方法通过 HTTP GET 请求从服务器上请求数据。<br>$.post() 方法通过 HTTP POST 请求从服务器上请求数据。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $.get(&quot;demo_test.asp&quot;,function(data,status)&#123;</span><br><span class="line">    alert(&quot;Data: &quot; + data + &quot;\nStatus: &quot; + status);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>参考网页：<a href="http://www.w3school.com.cn/jquery/index.asp" target="_blank" rel="noopener">W3school-jQuery教程</a></p>
 
           
         
@@ -470,7 +523,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -520,7 +573,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
